@@ -1,24 +1,63 @@
 .dot {
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    color: white;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  color: white;
 }
 
 .background-red {
-    background-color: #FF000C;
+  background-color: #FF000C;
 }
 
 .background-yellow {
-    background-color: #FFE500;
+  background-color: #FFE500;
 }
 
 .background-amber {
-    background-color: #FF9900;
+  background-color: #FF9900;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
+
+/* START Make app padding consistent */
+.app-padding {
+  padding-left: 12% !important;
+  padding-right: 12% !important;
+}
+
+@media screen and (min-width: 993px) and (max-width: 1090px) {
+  .app-padding {
+    padding-left: 8% !important;
+    padding-right: 8% !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .app-padding {
+    padding-left: 6% !important;
+    padding-right: 6% !important;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .app-padding {
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .app-padding {
+    padding-left: 2% !important;
+    padding-right: 2% !important;
+  }
+}
+
+.max-width {
+  max-width: 100% !important;
+}
+/* END Make app padding consistent */

@@ -14,6 +14,7 @@
   <link href="./css/modal.css" rel="stylesheet">
   <link href="./css/search-validation.css" rel="stylesheet">
   <link href="./css/header.css" rel="stylesheet">
+  <link href="./css/ultil.css" rel="stylesheet">
   <script src="./script/jquery-3.7.1.min"></script>
   <script src="./script/bootstrap.js"></script>
 
@@ -90,7 +91,7 @@
     }
 
     .content-top-text {
-      margin-left: 15%;
+      /* margin-left: 15%; */
       /* margin-top: 34px; */
       margin-top: 2.4vw;
       /* padding-top: 55px; */
@@ -124,10 +125,6 @@
     }
 
     @media screen and (max-width: 576px) {
-      .content-top-text {
-        margin-left: 5%;
-      }
-
       .content-top-image {
         margin-top: 32px;
         min-height: 170px;
@@ -296,7 +293,7 @@
       </div>
     </div>
     <div class="content-top-image">
-      <div class="lh-1 content-top-text">
+      <div class="lh-1 content-top-text app-padding max-width">
         <b class="big-text-inside-image">Discover</b>
         <b style="font-size: 7vw; color: #FF000C;">.</b>
         <br>
@@ -319,7 +316,7 @@
 
     <div class="mb-5">
       <div class="bg-dark" style="width:100%; height:25%">
-        <div class="pt-3 pb-4" style="padding: 0px 12px;">
+        <div class="pt-3 pb-4">
           <div class="db-search-block hidden">
             <div class="text-white container"
               style="font-size: 14px;font-weight: 400;line-height: 20px;padding: 0px 0px 6px 0px;">
@@ -350,11 +347,11 @@
             </div>
           </div>
           <div class="pt-3 hidden"></div>
-          <div class="search-block col-12 col-sm-10 col-md-8" style="margin: auto;">
-            <div class="text-white container search-text">Search:</div>
+          <div class="search-block app-padding max-width">
+            <div class="text-white container max-width search-text">Search:</div>
 
-            <div class="container" style="padding: 0px;display: flex;">
-              <div class="container search-input" style="flex: 1;">
+            <div class="container max-width" style="padding: 0px;display: flex;">
+              <div class="container search-input max-width" style="flex: 1;">
                 <div class="row">
                   <div class="col-8" style="padding: 0px 14px 0px 0px;">
                     <div class="input-group">
@@ -388,7 +385,7 @@
                 style="margin: 0px 0px 0px 14px;">Search</button>
             </div>
 
-            <div class="container mb-0 pt-3 text-white" style="display: flex;align-items: center;padding: 0px;">
+            <div class="container mb-0 pt-3 text-white max-width" style="display: flex;align-items: center;padding: 0px;">
               <div style="flex: 1;">
                 <span id="howFindButton" class="open-popup-button custom-under-line"
                   style="font-size: 15px;font-weight: 600;line-height: 28px;">How do I find my site</span>
@@ -403,8 +400,7 @@
       </div>
     </div>
 
-    <div class="mb-4">
-
+    <div class="mb-5">
       <div class="bg-dark" style="width:100%;">
         <div class="container pl-5 pt-3 pb-3 text-white" style="width:100%">
           <div id="vulnerable-area" class="row align-items-center">
@@ -476,13 +472,13 @@
           frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%"></iframe>
       </div>
     </div>
-    <div class="container lh-sm">
+    <div class="container lh-sm app-padding max-width">
       <h1>ARUME Insights</h1>
       <p>Learn more with our insights about cyber security, connected</p>
       <p>devices and critical infrastructure.</p>
     </div>
-    <div class="container pl-5">
 
+    <div class="container app-padding max-width">
       <div class="mb-4">
         <div class="container" style="padding: 0px;">
           <div class="row align-items-center">
@@ -534,7 +530,7 @@
   </main>
 
   <footer id="footer" style="display: block; width: 100%" class="footer-bs bg-dark text-white">
-    <div class="container" style="padding-top: 10px; padding-bottom: 10px;">
+    <div class="container app-padding max-width" style="padding-top: 10px; padding-bottom: 10px;">
       <div class="row">
         <div class="col-12 col-sm-7">
           <div class="row">
