@@ -111,6 +111,18 @@
       box-shadow: none !important;
     }
 
+    .search-text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      padding: 0px 0px 6px 0px;
+    }
+
+    .search-block {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
     @media screen and (max-width: 576px) {
       .content-top-text {
         margin-left: 5%;
@@ -130,11 +142,21 @@
         font-size: 7px;
         line-height: 7px;
       }
+
+      .search-block {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
     }
 
     @media screen and (min-width: 577px) and (max-width: 768px) {
       .content-top-text {
         margin-left: 7%;
+      }
+
+      .search-block {
+        padding-left: unset;
+        padding-right: unset;
       }
     }
 
@@ -329,9 +351,7 @@
           </div>
           <div class="pt-3 hidden"></div>
           <div class="search-block col-12 col-sm-10 col-md-8" style="margin: auto;">
-            <div class="text-white container"
-              style="font-size: 14px;font-weight: 400;line-height: 20px;padding: 0px 0px 6px 0px;">
-              Search:</div>
+            <div class="text-white container search-text">Search:</div>
 
             <div class="container" style="padding: 0px;display: flex;">
               <div class="container search-input" style="flex: 1;">
@@ -387,7 +407,7 @@
 
       <div class="bg-dark" style="width:100%;">
         <div class="container pl-5 pt-3 pb-3 text-white" style="width:100%">
-          <div class="row align-items-center">
+          <div id="vulnerable-area" class="row align-items-center">
             <div class="col-sm-4">
               <div>
                 <center>
@@ -395,14 +415,12 @@
                 </center>
               </div>
               <div>
-
                 <center>
-                  <label class="hidden" id="stationGlobalValue">4866</label>
-                  <h4 id="stationGlobal">4866</h4>
+                  <span class="hidden" id="stationGlobalValue">4866</span>
+                  <span id="stationGlobal" style="font-weight: bold; font-size: large;">4866</span>
                 </center>
               </div>
               <div>
-
                 <center>VULNERABLE STATIONS GLOBAL</center>
               </div>
             </div>
@@ -413,14 +431,12 @@
                 </center>
               </div>
               <div>
-
                 <center>
-                  <label class="hidden" id="stationUSAValue">4242</label>
-                  <h4 id="stationUSA" style="color:red">4242</h4>
+                  <span class="hidden" id="stationUSAValue">4242</span>
+                  <span id="stationUSA" style="font-weight: bold; font-size: large;">4242</span>
                 </center>
               </div>
               <div>
-
                 <center style="color:red">VULNERABLE STATIONS USA</center>
               </div>
             </div>
@@ -432,8 +448,8 @@
               </div>
               <div>
                 <center>
-                  <label class="hidden" id="stationOtherValue">624</label>
-                  <h4 id="stationOther">624</h4>
+                  <span class="hidden" id="stationOtherValue">624</span>
+                  <span id="stationOther" style="font-weight: bold; font-size: large;">624</span>
                 </center>
               </div>
               <div>
@@ -562,22 +578,26 @@
 <script src="./script/modal.js"></script>
 <script src="./script/search-validation.js"></script>
 <script type="text/javascript">
+  countUpSection();
+
   // count up section
-  let count = 1;
-  let showValueInterval = setInterval(showValue, 150);
-  function showValue() {
-    if (count === 10) clearInterval(showValueInterval);
-
-    updateStationValue("stationGlobal", count);
-    updateStationValue("stationUSA", count);
-    updateStationValue("stationOther", count);
-
-    count++;
-  }
-
   function updateStationValue(name, time) {
     const value = document.getElementById(name + "Value").textContent;
     document.getElementById(name).innerHTML = Math.ceil((value / 10) * time);
+  }
+
+  function countUpSection() {
+    let count = 1;
+    let showValueInterval = setInterval(showValue, 150);
+    function showValue() {
+      if (count === 10) clearInterval(showValueInterval);
+
+      updateStationValue("stationGlobal", count);
+      updateStationValue("stationUSA", count);
+      updateStationValue("stationOther", count);
+
+      count++;
+    }
   }
 
   document.getElementById("howFindButton").addEventListener("click", () => openPopup("howFindModal"));
@@ -585,4 +605,19 @@
   document.getElementById("whyImportantButton").addEventListener("click", () => {
     window.location.href = `./ArticleDetail.html?item-id=1`;
   });
+
+  var isCounted = false;
+  window.addEventListener('scroll', function () {
+        var vulnerableArea = document.getElementById('vulnerable-area');
+
+        // Get the position of the top of the div relative to the viewport
+        var rect = vulnerableArea.getBoundingClientRect();
+        var isVisible = (rect.top <= window.innerHeight) && (rect.bottom >= 0);
+
+        // Apply styles based on visibility
+        if (isVisible && !isCounted) {
+          isCounted = true;
+          countUpSection();
+        } 
+    });
 </script>
