@@ -61,6 +61,34 @@
       letter-spacing: -0.02em;
       text-align: left;
     }
+
+    .card {
+      border-radius: 11px;
+      border: 2px solid #E0E6ED;
+      box-shadow: 0px 4px 7px 0px #FF000C66;
+    }
+
+    @media screen and (max-width: 576px) {
+      nav {
+          scale: 0.85;
+          width: 115% !important;
+          margin-left: -50px !important;
+      }
+    }
+
+    @media screen and (min-width: 577px) and (max-width: 768px) {
+      nav {
+          scale: 0.75;
+          width: 125% !important;
+          margin-left: -120px !important;
+      }
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      nav {
+        margin-left: 0px !important;
+      }
+    }
   </style>
 </head>
 
@@ -79,7 +107,7 @@
       <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Vulnerability.html">VULNERABILITY</a>
       <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Solutions.html">SOLUTIONS</a>
       <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Articles.html">ARTICLES</a>
-      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./About.html">ABOUT</a>
+      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./About-landing.html">ABOUT</a>
       <div class="report-button-border">
         <button type="button" class="btn btn-danger me-2 py-2 report-button d-md-block"
           onclick="location.href = './Report.html'">
@@ -104,29 +132,29 @@
       
       <div class="row row-cols-1 row-cols-md-4 mb-4 text-center">
         <div class="col" >
-          <div class="card mb-4" style="border-radius: 11px;border: 2px solid #E0E6ED;box-shadow: 0px 7px 14px 0px #FF000C66;">
+          <div class="card mb-4">
             <div class="card-body " style="height: 200px;">
               <h2 class="card-title pricing-card-title" style="margin: 50px 0;">Who We Are</h1>
             </div>
           </div>
         </div>
         <div class="col" >
-          <div class="card mb-4" style="border-radius: 11px;border: 2px solid #E0E6ED;box-shadow: 0px 7px 14px 0px #FF000C66;">
+          <div class="card mb-4">
             <div class="card-body " style="height: 200px;">
               <h2 class="card-title pricing-card-title" style="margin: 50px 0;">Our Mission</h1>
             </div>
           </div>
         </div>
         <div class="col" >
-          <div class="card mb-4" style="border-radius: 11px;border: 2px solid #E0E6ED;box-shadow: 0px 7px 14px 0px #FF000C66;">
+          <div class="card mb-4">
             <div class="card-body " style="height: 200px;">
               <h2 class="card-title pricing-card-title" style="margin: 50px 0;">Get Involved</h1>
             </div>
           </div>
         </div>
         <div class="col" >
-          <div class="card mb-4" style="border-radius: 11px;border: 2px solid #E0E6ED;box-shadow: 0px 7px 14px 0px #FF000C66;">
-            <div class="card-body " style="height: 200px;">
+          <div class="card mb-4">
+            <div class="card-body" style="height: 200px;">
               <h2 class="card-title pricing-card-title" style="margin: 50px 0;">Sponsorship</h1>
             </div>
           </div>
@@ -137,7 +165,7 @@
       </div>
       <div class="row row-cols-1 row-cols-md-12 mb-12" style="margin: 50px 0">
         <div class="col" >
-          <div class="card mb-12" style="border-radius: 11px;border: 2px solid #E0E6ED;box-shadow: 0px 7px 14px 0px #FF000C66;">
+          <div class="card mb-12">
             <div class="card-header py-3" style="border: none;">
             <h2 >Won't ARUME’s efforts cause attacks by educating hackers?</h2>
             </div>
@@ -149,7 +177,7 @@
       </div>
       <div class="row row-cols-1 row-cols-md-12 mb-12" style="margin: 50px 0">
         <div class="col" >
-          <div class="card mb-12" style="border-radius: 11px;border: 2px solid #E0E6ED;box-shadow: 0px 7px 14px 0px #FF000C66;">
+          <div class="card mb-12">
             <div class="card-header py-3" style="border: none;">
             <h2 >Why focus on ATGs first, not broader industrial control systems (ICS)?</h2>
             </div>
