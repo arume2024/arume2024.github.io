@@ -98,11 +98,22 @@
   .img-fluid {
     width: 28vw !important;
     margin-top: -80px;
-    margin-bottom: 15px !important;
+    margin-bottom: 10px !important;
   }
 
   .content-title {
     font-weight: bold;
+  }
+
+  .content-header {
+    align-items: flex-end; 
+    padding-top: 1rem;
+    height: 15vh;
+    padding-bottom: 2rem;
+  }
+
+  .content-body {
+    height: 30vh;
   }
 
   @media screen and (max-width: 576px) {
@@ -148,6 +159,20 @@
       .content-title {
         text-align: center !important;
       }
+
+      .content-header {
+        height: unset;
+      }
+
+      .content-body {
+        height: unset;
+      }
+
+      nav {
+        scale: 0.85;
+        width: 115% !important;
+        margin-left: -50px !important;
+      }
   }
 
   @media screen and (min-width: 577px) and (max-width: 767px) {
@@ -157,7 +182,9 @@
       }
 
       nav {
-        scale: 0.8;
+        scale: 0.75;
+        width: 125% !important;
+        margin-left: -120px !important;
       }
 
       .company-icon {
@@ -195,6 +222,14 @@
       .content-title {
         text-align: center !important;
       }
+
+      .content-header {
+        height: unset;
+      }
+
+      .content-body {
+        height: unset;
+      }
   }
 
   @media screen and (min-width: 768px)  and (max-width: 1023px)  {
@@ -214,6 +249,12 @@
     .form-row {
         margin-top:3rem; 
         margin-bottom: 5rem
+    }
+
+    .nav-link {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+        font-size: 12px !important;
       }
   }
 
@@ -277,7 +318,7 @@
             <!-- Content -->
             <div class="col-10 right-panel">
               <div id="content_who" class="content-display" style="padding-left: 1rem">
-                <div class="row" style="align-items: flex-end; padding-top: 1rem;">
+                <div class="row content-header">
                   <div class="col-md-5">
                     <h3 class="content-title">Who we are</h3>
                   </div>
@@ -287,7 +328,7 @@
                   </div>
                 </div>
                 
-                <div class="row" style="margin-bottom: 2rem; padding-left: 1rem;">
+                <div class="row content-body" style="margin-bottom: 2rem; padding-left: 1rem;">
                   <p style="margin-top: 1rem; padding-right: 1rem;">We are concerned individuals who are committed to action where inaction could lead to grave harm to our nation.</p>
                   <p style="margin-top: 1rem; padding-right: 1rem;">As security professionals, engineers and community advocates passionate about both cyber defenses and civic duty, we could not stand by as threats to our energy sector grew more pressing yet response fell short.</p>
                   <p style="margin-top: 1rem; padding-right: 1rem;">United through shared dedication to defense, ARUME works to transform concern for security and sovereignty into proactive defenses for communities nationwide</p>
@@ -299,7 +340,7 @@
               </div>
 
               <div id="content_mission" class="content-not-display" style="padding-left: 1rem">
-                <div class="row" style="align-items: flex-end; padding-top: 1rem;">
+                <div class="row content-header">
                   <div class="col-md-5">
                     <h3 class="content-title">Our Mission</h3>
                   </div>
@@ -309,7 +350,7 @@
                   </div>
                 </div>
                 
-                <div class="row" style="margin-bottom: 2rem; padding-left: 1rem;">
+                <div class="row content-body" style="margin-bottom: 2rem; padding-left: 1rem;">
                   <p style="color: #FF000C; font-weight: 600; font-size: 15px;">To strengthen national security and resilience by helping safeguard America's critical infrastructure systems.</p>
                   <p style="margin-top: 1rem; padding-right: 1rem;">It is our vision to help secure the foundations that safeguard American livelihoods, starting by bringing awareness to and fortifying Automatic Tank Gauge (ATG) technology, before moving to address related risks in Industrial Control Systems underpinning critical services.</p>
                   <P style="margin-top: 1rem; padding-right: 1rem;">By promoting accountability, education and partnership between public and private entities, we hope to achieve greater resilience against evolving cyber dangers that could destabilize our national security and way of life.</p>
@@ -320,7 +361,7 @@
               </div>
 
               <div id="content_why" class="content-not-display" style="padding-left: 1rem">
-                <div class="row" style="align-items: flex-end; padding-top: 1rem;">
+                <div class="row content-header">
                   <div class="col-md-5">
                     <h3 class="content-title">Why Now?</h3>
                   </div>
@@ -330,7 +371,7 @@
                   </div>
                 </div>
                 
-                <div class="row" style="margin-bottom: 2rem; padding-left: 1rem;">
+                <div class="row content-body" style="margin-bottom: 2rem; padding-left: 1rem;">
                   <p style="margin-top: 1rem; padding-right: 1rem;">Since 2015 vulnerabilities of ATG systems have gone unaddressed despite early warning and geopolitical threats evolve rapidly alongside technology. Adversaries now have greater means and motive to disrupt critical infrastructure affecting 330 million lives. </p>
                   <p style="margin-top: 1rem; padding-right: 1rem;">Though government bodies seek to cooperate, fragmented oversight leaves gaps adversaries may exploit. If exposed entry points like ATGs remain unlocked, the potential for economic disruption grows alongside geopolitical tension.</p>
                 </div>
@@ -340,13 +381,13 @@
               </div>
 
               <div id="content_sponsorship" class="content-not-display" style="padding-left: 1rem">
-                <div class="row" style="align-items: flex-end; padding-top: 1rem;">
+                <div class="row content-header">
                   <div class="col-md-5">
                     <h3 class="content-title" style="margin-top: 2.5rem;">Sponsorship</h3>
                   </div>
                 </div>
                 
-                <div class="row" style="margin-bottom: 2rem; padding-left: 1rem;">
+                <div class="row content-body" style="margin-bottom: 2rem; padding-left: 1rem;">
                   <p style="margin-top: 1rem; padding-right: 1rem;">As an organization dedicated to civic duty, ARUME relies on the generosity of donors to fund our important work. Your contributions directly support broader vulnerability detection, educational campaigns and policy initiatives to strengthen national infrastructure security.</p>
                   <p style="margin-top: 1rem; padding-right: 1rem;">Sponsors gain recognition through our website and materials while demonstrating leadership on critical issues. With your help, we can fortify defenses against those seeking to disrupt daily life across the United States.</p>
                   <p style="margin-top: 1rem; padding-right: 1rem; color: #FF000C;"><a style="color: #FF000C; text-decoration: none;" href="mailto:sponsorship@arume.org">Interested in sponsoring ARUME? Contact us.</a> </p>
@@ -357,13 +398,13 @@
               </div>
 
               <div id="content_participate" class="content-not-display" style="padding-left: 1rem">
-                <div class="row" style="align-items: flex-end; padding-top: 1rem;">
+                <div class="row content-header">
                   <div class="col-md-5">
                     <h3 class="content-title" style="margin-top: 2.5rem;">Participation</h3>
                   </div>
                 </div>
                 
-                <div class="row" style="margin-bottom: 2rem; padding-left: 1rem;">
+                <div class="row content-body" style="margin-bottom: 2rem; padding-left: 1rem;">
                   <p style="margin-top: 1rem; padding-right: 1rem;">ARUME brings together expertise from diverse sectors including cybersecurity, engineering, policy and communications. If you have skills to offer our mission, please get in touch.</p>
                   <p style="margin-top: 1rem; padding-right: 1rem;">Infrastructure professionals and researchers provide strategic guidance. Writers spread awareness of vulnerabilities and solutions. Students gain experience protecting national security through internships. </p>
                   <p style="margin-top: 1rem; padding-right: 1rem; color: #FF000C;">Contact <a style="color: #FF000C;" href="mailto:participate@arume.org">participate@arume.org</a> to see how you can get involved.</p>
@@ -374,13 +415,13 @@
               </div>
               
               <div id="content_advertising" class="content-not-display" style="padding-left: 1rem">
-                <div class="row" style="align-items: flex-end; padding-top: 1rem;">
+                <div class="row content-header">
                   <div class="col-md-5">
                     <h3 class="content-title" style="margin-top: 2.5rem;">Advertising</h3>
                   </div>
                 </div>
                 
-                <div class="row" style="margin-bottom: 2rem; padding-left: 1rem;">
+                <div class="row content-body" style="margin-bottom: 2rem; padding-left: 1rem;">
                   <p style="margin-top: 1rem;">Advertising sponsors reach an industry specific audience dedicated to infrastructure well-being. Ads appear on our vulnerability scanner tools and educational pages.</p>
                   <p style="margin-top: 1rem;">Premium placements are also available. Advertisers gain visibility while supporting essential work to protect critical systems.</p>
                   <p style="margin-top: 1rem; color: #FF000C;">Email <a style="color: #FF000C;" href="mailto:ads@arume.org">ads@arume.org</a> for rates and packages.</p>
