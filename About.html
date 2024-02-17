@@ -24,7 +24,8 @@
   body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh !important;
+    background-color: #E0E6ED;
   }
   .content {
     flex: 1;
@@ -38,6 +39,7 @@
     border-radius: 11px;
     border: 2px solid #E0E6ED;
     box-shadow: 0px 4px 7px 0px #f0495266;
+    background-color: white;
   }
   .menu-item-selected {
     font-weight: 600;
@@ -46,6 +48,9 @@
   }
   .content-display {
     display: block;
+    margin-top: 4rem;
+    opacity: 0.75;
+    text-align: left;
   }
   .content-not-display {
     display: none;  
@@ -70,12 +75,14 @@
     font-weight: 500 !important;
     font-size: xx-large;
     padding-left: 1rem;
+    opacity: 0.8;
   }
 
   .menu-left-panel {
     height: fit-content; 
     padding: 3px !important;
     border-right: 1px solid #dee2e6 !important;
+    opacity: 0.8;
   }
 
   .button-left {
@@ -87,15 +94,15 @@
     float: right !important;
     padding-bottom: 2rem;
   }
-
-  .content-display {
-    margin-top: 4rem;
-  }
   
   .img-fluid {
     width: 28vw !important;
     margin-top: -80px;
     margin-bottom: 15px !important;
+  }
+
+  .content-title {
+    font-weight: bold;
   }
 
   @media screen and (max-width: 576px) {
@@ -122,7 +129,6 @@
       }
 
       .content-display {
-        text-align: center;
         padding-left: 0px !important;
       }
 
@@ -132,6 +138,15 @@
 
       .right-panel {
         width: 100%;
+      }
+
+      .form-row {
+        margin-top:3rem; 
+        margin-bottom: 5rem
+      }
+      
+      .content-title {
+        text-align: center !important;
       }
   }
 
@@ -155,7 +170,6 @@
       }
 
       .content-display {
-        text-align: center;
         padding-left: 0px !important;
         margin-top: 0px !important;
       }
@@ -177,6 +191,10 @@
         margin-top: 4vh;
         margin-left: 10vw !important;
       }
+      
+      .content-title {
+        text-align: center !important;
+      }
   }
 
   @media screen and (min-width: 768px)  and (max-width: 1023px)  {
@@ -190,9 +208,13 @@
     }
 
     .content-display {
-      text-align: left;
       padding-left: 0px !important;
     }
+    
+    .form-row {
+        margin-top:3rem; 
+        margin-bottom: 5rem
+      }
   }
 
   @media screen and (min-width: 1024px)  and (max-width: 1599px) {
@@ -202,10 +224,6 @@
     }
     .img-fluid {
       padding-bottom: 1.1rem !important;
-    }
-
-    .content-display {
-        text-align: left;
     }
   }
 
@@ -237,7 +255,7 @@
 	
 	<main class="content mt-5">
     <div class="container pt-xxl-5 mt-xxl-5 pb-xl-5 mb-xxl-5">
-      <div class="row" style="margin-top:5rem; margin-bottom: 5rem">
+      <div class="row form-row">
         <div class="col-3"></div>
         <div class="col-7 about-main page-body">
           <div class="row content-area" style="padding-top: 2rem">
@@ -261,7 +279,7 @@
               <div id="content_who" class="content-display" style="padding-left: 1rem">
                 <div class="row" style="align-items: flex-end; padding-top: 1rem;">
                   <div class="col-md-5">
-                    <h3>Who we are</h3>
+                    <h3 class="content-title">Who we are</h3>
                   </div>
                   <div class="col-2"></div>
                   <div class="col-4" style="text-align: center;">
@@ -283,7 +301,7 @@
               <div id="content_mission" class="content-not-display" style="padding-left: 1rem">
                 <div class="row" style="align-items: flex-end; padding-top: 1rem;">
                   <div class="col-md-5">
-                    <h3>Our Mission</h3>
+                    <h3 class="content-title">Our Mission</h3>
                   </div>
                   <div class="col-2"></div>
                   <div class="col-4" style="text-align: center;">
@@ -304,7 +322,7 @@
               <div id="content_why" class="content-not-display" style="padding-left: 1rem">
                 <div class="row" style="align-items: flex-end; padding-top: 1rem;">
                   <div class="col-md-5">
-                    <h3>Why Now?</h3>
+                    <h3 class="content-title">Why Now?</h3>
                   </div>
                   <div class="col-2"></div>
                   <div class="col-4" style="text-align: center;">
@@ -324,7 +342,7 @@
               <div id="content_sponsorship" class="content-not-display" style="padding-left: 1rem">
                 <div class="row" style="align-items: flex-end; padding-top: 1rem;">
                   <div class="col-md-5">
-                    <h3 style="margin-top: 2.5rem;">Sponsorship</h3>
+                    <h3 class="content-title" style="margin-top: 2.5rem;">Sponsorship</h3>
                   </div>
                 </div>
                 
@@ -341,7 +359,7 @@
               <div id="content_participate" class="content-not-display" style="padding-left: 1rem">
                 <div class="row" style="align-items: flex-end; padding-top: 1rem;">
                   <div class="col-md-5">
-                    <h3 style="margin-top: 2.5rem;">Participation</h3>
+                    <h3 class="content-title" style="margin-top: 2.5rem;">Participation</h3>
                   </div>
                 </div>
                 
@@ -358,7 +376,7 @@
               <div id="content_advertising" class="content-not-display" style="padding-left: 1rem">
                 <div class="row" style="align-items: flex-end; padding-top: 1rem;">
                   <div class="col-md-5">
-                    <h3 style="margin-top: 2.5rem;">Advertising</h3>
+                    <h3 class="content-title" style="margin-top: 2.5rem;">Advertising</h3>
                   </div>
                 </div>
                 
