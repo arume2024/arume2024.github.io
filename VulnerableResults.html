@@ -14,6 +14,7 @@
   <link href="./css/modal.css" rel="stylesheet">
   <link href="./css/search-validation.css" rel="stylesheet">
   <link href="./css/header.css" rel="stylesheet">
+  <link href="./css/ultil.css" rel="stylesheet">
   <script src="./script/jquery-3.7.1.min"></script>
   <script src="./script/bootstrap.js"></script>
   
@@ -92,21 +93,23 @@
     <a class="company-icon" href="./Home.html">
       <img class="d-none d-sm-block" src="./files/trade-mark.svg" height="48.4px">
       <img class="d-block d-sm-none" src="./files/logo.svg" height="48.4px">
-    </a> 
-    <button type="button" class="btn btn-danger me-2 py-2 report-button report-button-xs d-block d-md-none" onclick="location.href = './Report.html'">
-      Report
-    </button>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Vulnerability.html">VULNERABILITY</a>
-        <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Solutions.html">SOLUTIONS</a>
-        <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Articles.html">ARTICLES</a>
-        <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./About.html">ABOUT</a>
-        <button type="button" class="btn btn-danger me-2 py-2 report-button d-none d-md-block" onclick="location.href = './Report.html'">
+      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Vulnerability.html">VULNERABILITY</a>
+      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Solutions.html">SOLUTIONS</a>
+      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Articles.html">ARTICLES</a>
+      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./About.html">ABOUT</a>
+      <div class="report-button-border">
+        <button type="button" class="btn btn-danger me-2 py-2 report-button d-md-block"
+          onclick="location.href = './Report.html'">
           Report
         </button>
+      </div>
     </div>
   </nav>
 
@@ -436,7 +439,7 @@
   </main>
 
   <footer id="footer" style="display: block; width: 100%" class="footer-bs bg-dark text-white">
-    <div class="container" style="padding-top: 10px; padding-bottom: 10px;">
+    <div class="container app-padding max-width" style="padding-top: 10px; padding-bottom: 10px;">
       <div class="row">
         <div class="col-12 col-sm-7">
           <div class="row">
