@@ -68,6 +68,10 @@
       box-shadow: 0px 4px 7px 0px #FF000C66;
     }
 
+    .button {
+      cursor: pointer;
+    }
+
     @media screen and (max-width: 576px) {
       nav {
           scale: 0.85;
@@ -133,28 +137,28 @@
       <div class="row row-cols-1 row-cols-md-4 mb-4 text-center">
         <div class="col" >
           <div class="card mb-4">
-            <div class="card-body " style="height: 200px;">
+            <div class="card-body button button_who" style="height: 200px;">
               <h2 class="card-title pricing-card-title" style="margin: 50px 0;">Who We Are</h1>
             </div>
           </div>
         </div>
         <div class="col" >
           <div class="card mb-4">
-            <div class="card-body " style="height: 200px;">
+            <div class="card-body button button_mission" style="height: 200px;">
               <h2 class="card-title pricing-card-title" style="margin: 50px 0;">Our Mission</h1>
             </div>
           </div>
         </div>
         <div class="col" >
           <div class="card mb-4">
-            <div class="card-body " style="height: 200px;">
+            <div class="card-body button button_participate" style="height: 200px;">
               <h2 class="card-title pricing-card-title" style="margin: 50px 0;">Get Involved</h1>
             </div>
           </div>
         </div>
         <div class="col" >
           <div class="card mb-4">
-            <div class="card-body" style="height: 200px;">
+            <div class="card-body button button_sponsorship" style="height: 200px;">
               <h2 class="card-title pricing-card-title" style="margin: 50px 0;">Sponsorship</h1>
             </div>
           </div>
@@ -166,7 +170,7 @@
       <div class="row row-cols-1 row-cols-md-12 mb-12" style="margin: 50px 0">
         <div class="col" >
           <div class="card mb-12">
-            <div class="card-header py-3" style="border: none;">
+            <div class="card-header py-3 button button_advertising" style="border: none;">
             <h2 >Won't ARUME’s efforts cause attacks by educating hackers?</h2>
             </div>
             <div class="card-body ">
@@ -178,7 +182,7 @@
       <div class="row row-cols-1 row-cols-md-12 mb-12" style="margin: 50px 0">
         <div class="col" >
           <div class="card mb-12">
-            <div class="card-header py-3" style="border: none;">
+            <div class="card-header py-3 button button_why" style="border: none;">
             <h2 >Why focus on ATGs first, not broader industrial control systems (ICS)?</h2>
             </div>
             <div class="card-body ">
@@ -236,3 +240,22 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+  const menus = ["mission", "who", "why", "sponsorship", "participate", "advertising"];
+  for (var i=0; i < menus.length; i++) {
+    register(menus[i]);
+  };
+
+  function register(menu) {
+    const buttonElement = document.getElementsByClassName("button_"+menu);
+    for (var i=0; i < buttonElement.length; i++) {
+      buttonElement[i].addEventListener("click", () => handleOnCLickedFor(menu), false);
+    };
+  }
+
+  function handleOnCLickedFor(menuName) {
+    window.location.href = './about.html#' + menuName;
+  }
+
+</script>

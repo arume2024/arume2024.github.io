@@ -524,4 +524,10 @@
     };
   }
 
+  window.onload = function() {
+        var targetMenuName = window.location.hash.substr(1);
+        var targetMenu = document.getElementById('menu_' + targetMenuName);
+        targetMenu.click();
+    };
+
 </script>
