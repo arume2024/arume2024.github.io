@@ -1,632 +1,636 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="TSA Team" />
+        <meta name="generator" content="TSA" />
+        <title>ARUME Home</title>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="TSA Team">
-  <meta name="generator" content="TSA">
-  <title>ARUME Home</title>
+        <!-- Bootstrap core CSS -->
+        <link href="./files/bootstrap.min.css" rel="stylesheet" />
+        <link href="./css/modal.css" rel="stylesheet" />
+        <link href="./css/search-validation.css" rel="stylesheet" />
+        <link href="./css/header.css" rel="stylesheet" />
+        <link href="./css/ultil.css" rel="stylesheet" />
+        <script src="./script/jquery-3.7.1.min"></script>
+        <script src="./script/bootstrap.js"></script>
 
-  <!-- Bootstrap core CSS -->
-  <link href="./files/bootstrap.min.css" rel="stylesheet">
-  <link href="./css/modal.css" rel="stylesheet">
-  <link href="./css/search-validation.css" rel="stylesheet">
-  <link href="./css/header.css" rel="stylesheet">
-  <link href="./css/ultil.css" rel="stylesheet">
-  <script src="./script/jquery-3.7.1.min"></script>
-  <script src="./script/bootstrap.js"></script>
+        <meta name="theme-color" content="#7952b3" />
 
-  <meta name="theme-color" content="#7952b3">
+        <style>
+            footer p {
+                margin: 0px;
+                font-size: 16;
+            }
 
-  <style>
-    footer p {
-      margin: 0px;
-      font-size: 16;
-    }
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+            .content-top-image {
+                background-image: url("./files/header1.png");
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+                width: 100%;
+                /* height: 537px; */
+                height: 38vw;
+            }
 
-    .content-top-image {
-      background-image: url('./files/header1.png');
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      width: 100%;
-      /* height: 537px; */
-      height: 38vw;
-    }
-
-    /* .content {
+            /* .content {
       flex: 1;
     } */
-    .footer {
-      background-color: #f5f5f5;
-      text-align: center;
-      padding: 10px 0;
-    }
-    .footer-customize {
-      margin-top: 5.25rem;
-    }
+            .footer {
+                background-color: #f5f5f5;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .footer-customize {
+                margin-top: 5.25rem;
+            }
 
-    .hidden {
-      display: none;
-    }
+            .hidden {
+                display: none;
+            }
 
-    .open-popup-button {
-      cursor: pointer;
-    }
+            .open-popup-button {
+                cursor: pointer;
+            }
 
-    .input-group {
-      height: 54px;
-    }
+            .input-group {
+                height: 54px;
+            }
 
-    .input-group-text {
-      background-color: white;
-    }
+            .input-group-text {
+                background-color: white;
+            }
 
-    .big-text-inside-image {
-      /* font-size: 96px; */
-      font-size: 6.7vw;
-      font-weight: 700;
-      /* line-height: 96px; */
-      line-height: 6.7vw;
-      letter-spacing: -0.02em;
-      text-align: left;
-      color: #181818;
-    }
+            .big-text-inside-image {
+                /* font-size: 96px; */
+                font-size: 6.7vw;
+                font-weight: 700;
+                /* line-height: 96px; */
+                line-height: 6.7vw;
+                letter-spacing: -0.02em;
+                text-align: left;
+                color: #181818;
+            }
 
-    .small-text-inside-image {
-      /* font-size: 18px; */
-      font-size: 1.26vw;
-      font-weight: 300;
-      /* line-height: 28px; */
-      line-height: 1.97vw;
-      letter-spacing: 0em;
-      text-align: left;
-      color: #181818;
-      margin-top: 1.6vw !important;
-      margin-bottom: 0.2vw;
-    }
+            .small-text-inside-image {
+                /* font-size: 18px; */
+                font-size: 1.26vw;
+                font-weight: 300;
+                /* line-height: 28px; */
+                line-height: 1.97vw;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #181818;
+                margin-top: 1.6vw !important;
+                margin-bottom: 0.2vw;
+            }
 
-    .content-top-text {
-      margin-left: 12%;
-      /* margin-top: 34px; */
-      margin-top: 77px;
-      /* padding-top: 55px; */
-      padding-top: 4.33vw;
-    }
+            .content-top-text {
+                margin-left: 12%;
+                /* margin-top: 34px; */
+                margin-top: 77px;
+                /* padding-top: 55px; */
+                padding-top: 4.33vw;
+            }
 
-    .input-without-border {
-      border: none !important;
-      outline: none !important;
-      border-width: 0 !important;
-      box-shadow: none !important;
-    }
+            .input-without-border {
+                border: none !important;
+                outline: none !important;
+                border-width: 0 !important;
+                box-shadow: none !important;
+            }
 
-    .input-without-border:focus {
-      border: none !important;
-      outline: none !important;
-      border-width: 0 !important;
-      box-shadow: none !important;
-    }
+            .input-without-border:focus {
+                border: none !important;
+                outline: none !important;
+                border-width: 0 !important;
+                box-shadow: none !important;
+            }
 
-    .search-text {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      padding: 0px 0px 6px 0px;
-    }
+            .search-text {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                padding: 0px 0px 6px 0px;
+            }
 
-    .search-block {
-      padding-left: 20vw;
-      padding-right: 20vw;
-    }
-    .mu-single-service {
-      display: inline;
-      float: left;
-      width: 100%;
-      margin-top: 35px;
-    }
+            .search-block {
+                padding-left: 20vw;
+                padding-right: 20vw;
+            }
+            .mu-single-service {
+                display: inline;
+                float: left;
+                width: 100%;
+                margin-top: 35px;
+            }
 
-    @media screen and (max-width: 576px) {
-      .content-top-image {
-        min-height: 170px;
-      }
+            @media screen and (max-width: 576px) {
+                .content-top-image {
+                    min-height: 170px;
+                }
 
-      .big-text-inside-image {
-        font-size: 27px;
-        line-height: 27px;
-      }
+                .big-text-inside-image {
+                    font-size: 27px;
+                    line-height: 27px;
+                }
 
-      .small-text-inside-image {
-        font-size: 7px;
-        line-height: 7px;
-      }
+                .small-text-inside-image {
+                    font-size: 7px;
+                    line-height: 7px;
+                }
 
-      .search-block {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
+                .search-block {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
 
-      .content-top-text {
-        margin-left: 2%;
-      }
-      .footer-customize {
-        margin-top: 0.5rem;
-      }
-    }
+                .content-top-text {
+                    margin-left: 2%;
+                }
+                .footer-customize {
+                    margin-top: 0.5rem;
+                }
+            }
 
-    @media screen and (min-width: 577px) and (max-width: 768px) {
-      .content-top-text {
-        margin-left: 4%;
-      }
+            @media screen and (min-width: 577px) and (max-width: 768px) {
+                .content-top-text {
+                    margin-left: 4%;
+                }
 
-      .search-block {
-        padding-left: 5vw;
-        padding-right: 5vw;
-      }
-    }
+                .search-block {
+                    padding-left: 5vw;
+                    padding-right: 5vw;
+                }
+            }
 
-    @media screen and (min-width: 769px) and (max-width: 1599px) {
-      .search-block {
-        padding-left: 8vw;
-        padding-right: 8vw;
-      }
-      .content-top-text {
-        margin-left: 6%;
-      }
-    }
+            @media screen and (min-width: 769px) and (max-width: 1599px) {
+                .search-block {
+                    padding-left: 8vw;
+                    padding-right: 8vw;
+                }
+                .content-top-text {
+                    margin-left: 6%;
+                }
+            }
 
-    .custom-under-line {
-      padding-bottom: 2.5px;
-      border-bottom: 1.5px solid;
-      line-height: 48px;
-    }
+            .custom-under-line {
+                padding-bottom: 2.5px;
+                border-bottom: 1.5px solid;
+                line-height: 48px;
+            }
 
-    /* Responsive for search button */
-    @media screen and (max-width: 768px) {
-      .db-search-btn-small {
-        display: block !important;
-      }
+            /* Responsive for search button */
+            @media screen and (max-width: 768px) {
+                .db-search-btn-small {
+                    display: block !important;
+                }
 
-      .search-btn-small {
-        display: block !important;
-      }
+                .search-btn-small {
+                    display: block !important;
+                }
 
-      .db-search-btn-big {
-        display: none;
-      }
+                .db-search-btn-big {
+                    display: none;
+                }
 
-      .search-btn-big {
-        display: none;
-      }
+                .search-btn-big {
+                    display: none;
+                }
 
-      .db-search-input {
-        padding: 0px !important;
-      }
+                .db-search-input {
+                    padding: 0px !important;
+                }
 
-      .search-input {
-        padding-right: 12px !important;
-      }
-    }
+                .search-input {
+                    padding-right: 12px !important;
+                }
+            }
 
-    .card-image-background {
-      height: 273px;
-      background-color: #B1B5C3;
-      border-radius: 20px 20px 0px 0px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+            .card-image-background {
+                height: 273px;
+                background-color: #b1b5c3;
+                border-radius: 20px 20px 0px 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
 
-    .card-image {
-      width: 118px;
-      height: 93px;
-    }
+            .card-image {
+                width: 118px;
+                height: 93px;
+            }
 
-    .card-title {
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-      color: #141418;
-    }
+            .card-title {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: #141418;
+            }
 
-    .card-text {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 20px;
-      color: #141418;
-    }
+            .card-text {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 20px;
+                color: #141418;
+            }
+        </style>
+    </head>
 
-  </style>
-</head>
+    <body class="body">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <a class="company-icon" href="./Home.html">
+                <img src="./files/trade-mark.svg" height="48.4px" />
+            </a>
 
-<body class="body">
-  <nav class="navbar navbar-expand-md navbar-light fixed-top">
-    <a class="company-icon" href="./Home.html">
-      <img src="./files/trade-mark.svg" height="48.4px">
-    </a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Vulnerability.html">VULNERABILITY</a>
-      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Solutions.html">SOLUTIONS</a>
-      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Articles.html">ARTICLES</a>
-      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./About-landing.html">ABOUT</a>
-      <div class="report-button-border">
-        <button type="button" class="btn btn-danger me-2 py-2 report-button d-md-block"
-          onclick="location.href = './Report.html'">
-          Report
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <main class="content">
-    <div id="howFindModal" class="modal">
-      <div class="modal-content"
-        style="border-radius: 12px;padding: 24px;box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);">
-        <div>
-          <h6 class="modal-title">How do I find my site?</h6>
-          <p>You can search our database by site address, tank gauge banner (example below), by branded oil company
-            (e.g. Shell, BP). Or if you know your site’s IP address or domain name you can use our internet search.</p>
-          <img src="./files/ip_address.png" />
-          <p>If your site isn’t displayed in results this does not mean your site is not vulnerable. It is recommended
-            that all owner/operators of sites using tank gauges check back as we update the list of vulnerable sites
-            regularly.</p>
-        </div>
-        <center class="close"
-          style="font-weight: 600;font-size: 16px;line-height: 24px;border-radius: 8px;padding: 10px 18px;color: #344054;">
-          Okay</center>
-      </div>
-    </div>
-    <div id="tankGaugesModal" class="modal">
-      <div class="modal-content"
-        style="border-radius: 12px;padding: 24px;box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);">
-        <div>
-          <h6 class="modal-title">Discoverable Tank Gauges</h6>
-          <p>Tank gauges shown on our site are those discoverable on the public internet. This may not include all tank
-            gauges and should not be considered complete.<br><br></p>
-          <p>It is recommended that all owner/operators of sites using tank gauges check back regularly as we update the
-            number of vulnerable sites</p>
-        </div>
-        <center class="close"
-          style="font-weight: 600;font-size: 16px;line-height: 24px;border-radius: 8px;padding: 10px 18px;color: #344054;">
-          Okay</center>
-      </div>
-    </div>
-    <div class="content-top-image">
-      <div class="lh-1 content-top-text">
-        <b class="big-text-inside-image">Discover</b>
-        <b style="font-size: 7vw; color: #FF000C;">.</b>
-        <br>
-        <b class="big-text-inside-image">Recover</b>
-        <b style="font-size: 7vw; color: #FF000C;">.</b>
-        <br>
-        <b class="big-text-inside-image">Protect</b>
-        <b style="font-size: 7vw; color: #FF000C;">.</b>
-        <br>
-        <p class="lh-base mt-4 small-text-inside-image">ARUME allows you to check fuel tank gauges exposed <br>on the internet. Test your sites' security and protect our <br>nation's critical infrastructure from cyber attacks. </p>
-        <b id="whyImportantButton" class="lh-base open-popup-button small-text-inside-image" style="font-weight: 500; color: #FF0000;">Why is this important?</b>
-      </div>
-    </div>
-
-    <div class="mb-5">
-      <div class="bg-dark" style="width:100%; height:25%">
-        <div class="pt-3 pb-4">
-          <div class="db-search-block hidden">
-            <div class="text-white container"
-              style="font-size: 14px;font-weight: 400;line-height: 20px;padding: 0px 0px 6px 0px;">
-              Database search:</div>
-            <div class="container" style="padding: 0px;">
-              <div class="row" style="padding: 0px 12px;">
-                <div class="col-12 col-sm-10 db-search-input" style="padding: 0px 12px 0px 0px;">
-                  <div class="input-group">
-                    <span class="input-group-text" style="border: none;padding: 10px 0px 10px 22px;"><img
-                        src="./files/ic-search.svg" style="width: 20px;height: 20px;"></span>
-                    <input id="dbSearchText" type="text" class="form-control input-without-border"
-                      style="font-size: 14px;font-weight: 400;line-height: 28px;padding: 10px 14px 10px 8px;"
-                      placeholder="Search by site name, address or oil company name e,g. shell">
-                  </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Vulnerability.html">VULNERABILITY</a>
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Solutions.html">SOLUTIONS</a>
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Articles.html">ARTICLES</a>
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./About-landing.html">ABOUT</a>
+                <div class="report-button-border">
+                    <button type="button" class="btn btn-danger me-2 py-2 report-button d-md-block" onclick="location.href = './Report.html'">
+                        Report
+                    </button>
                 </div>
-                <button id="dbSearchButton" class="col-sm-2 btn btn-danger db-search-btn-big"
-                  style="font-size: 16px;font-weight: 800;line-height: 24px;">Search</button>
-              </div>
+            </div>
+        </nav>
+
+        <main class="content">
+            <div id="howFindModal" class="modal">
+                <div class="modal-content" style="border-radius: 12px; padding: 24px; box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);">
+                    <div>
+                        <h6 class="modal-title">How do I find my site?</h6>
+                        <p>You can search our database by site address, tank gauge banner (example below), by branded oil company (e.g. Shell, BP). Or if you know your site’s IP address or domain name you can use our internet search.</p>
+                        <img src="./files/ip_address.png" />
+                        <p>
+                            If your site isn’t displayed in results this does not mean your site is not vulnerable. It is recommended that all owner/operators of sites using tank gauges check back as we update the list of vulnerable sites
+                            regularly.
+                        </p>
+                    </div>
+                    <center class="close" style="font-weight: 600; font-size: 16px; line-height: 24px; border-radius: 8px; padding: 10px 18px; color: #344054;">
+                        Okay
+                    </center>
+                </div>
+            </div>
+            <div id="tankGaugesModal" class="modal">
+                <div class="modal-content" style="border-radius: 12px; padding: 24px; box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);">
+                    <div>
+                        <h6 class="modal-title">Discoverable Tank Gauges</h6>
+                        <p>
+                            Tank gauges shown on our site are those discoverable on the public internet. This may not include all tank gauges and should not be considered complete.<br />
+                            <br />
+                        </p>
+
+                        <p>It is recommended that all owner/operators of sites using tank gauges check back regularly as we update the number of vulnerable sites</p>
+                    </div>
+                    <center class="close" style="font-weight: 600; font-size: 16px; line-height: 24px; border-radius: 8px; padding: 10px 18px; color: #344054;">
+                        Okay
+                    </center>
+                </div>
+            </div>
+            <div class="content-top-image">
+                <div class="lh-1 content-top-text">
+                    <b class="big-text-inside-image">Discover</b>
+                    <b style="font-size: 7vw; color: #ff000c;">.</b>
+                    <br />
+                    <b class="big-text-inside-image">Recover</b>
+                    <b style="font-size: 7vw; color: #ff000c;">.</b>
+                    <br />
+                    <b class="big-text-inside-image">Protect</b>
+                    <b style="font-size: 7vw; color: #ff000c;">.</b>
+                    <br />
+                    <p class="lh-base mt-4 small-text-inside-image">
+                        ARUME allows you to check fuel tank gauges exposed <br />
+                        on the internet. Test your sites' security and protect our <br />
+                        nation's critical infrastructure from cyber attacks.
+                    </p>
+                    <b id="whyImportantButton" class="lh-base open-popup-button small-text-inside-image" style="font-weight: 500; color: #ff0000;">Why is this important?</b>
+                </div>
             </div>
 
-            <div class="container mb-0 text-white db-search-btn-small pt-3" style="display: none;">
-              <div class="row" style="align-items: center;">
-                <div class="col-6 col-sm-12" style="padding: 0px;"></div>
+            <div class="mb-5">
+                <div class="bg-dark" style="width: 100%; height: 25%;">
+                    <div class="pt-3 pb-4">
+                        <div class="db-search-block hidden">
+                            <div class="text-white container" style="font-size: 14px; font-weight: 400; line-height: 20px; padding: 0px 0px 6px 0px;">
+                                Database search:
+                            </div>
+                            <div class="container" style="padding: 0px;">
+                                <div class="row" style="padding: 0px 12px;">
+                                    <div class="col-12 col-sm-10 db-search-input" style="padding: 0px 12px 0px 0px;">
+                                        <div class="input-group">
+                                            <span class="input-group-text" style="border: none; padding: 10px 0px 10px 22px;"><img src="./files/ic-search.svg" style="width: 20px; height: 20px;" /></span>
 
-                <button id="dbSearchButton" class="col-6 btn btn-danger"
-                  style="font-size: 18px;font-weight: 800;line-height: 24px;padding: 10px 14px;">Search</button>
-              </div>
+                                            <input
+                                                id="dbSearchText"
+                                                type="text"
+                                                class="form-control input-without-border"
+                                                style="font-size: 14px; font-weight: 400; line-height: 28px; padding: 10px 14px 10px 8px;"
+                                                placeholder="Search by site name, address or oil company name e,g. shell"
+                                            />
+                                        </div>
+                                    </div>
+                                    <button id="dbSearchButton" class="col-sm-2 btn btn-danger db-search-btn-big" style="font-size: 16px; font-weight: 800; line-height: 24px;">Search</button>
+                                </div>
+                            </div>
+
+                            <div class="container mb-0 text-white db-search-btn-small pt-3" style="display: none;">
+                                <div class="row" style="align-items: center;">
+                                    <div class="col-6 col-sm-12" style="padding: 0px;"></div>
+
+                                    <button id="dbSearchButton" class="col-6 btn btn-danger" style="font-size: 18px; font-weight: 800; line-height: 24px; padding: 10px 14px;">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3 hidden"></div>
+                        <div class="search-block">
+                            <div class="text-white container max-width search-text">Search:</div>
+                            <div class="container max-width" style="padding: 0px; display: flex;">
+                                <div class="container search-input max-width" style="flex: 1;">
+                                    <div class="row">
+                                        <div class="col-8" style="padding: 0px 14px 0px 0px;">
+                                            <div class="input-group">
+                                                <span class="input-group-text" style="border: none; padding: 10px 0px 10px 22px; border-radius: 8px 0px 0px 8px;"><img src="./files/ic-search.svg" style="width: 20px; height: 20px;" /></span>
+
+                                                <input
+                                                    id="domain"
+                                                    type="text"
+                                                    class="form-control input-without-border"
+                                                    style="font-size: 14px; font-weight: 400; line-height: 28px; padding: 10px 14px 10px 8px; border-radius: 0px 8px 8px 0px;"
+                                                    placeholder="Search by any words in the site name, address or by IP address"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4" style="padding: 0px;">
+                                            <div class="input-group" style="display: flex;">
+                                                <span class="input-group-text" style="border: none; padding-right: 0px; border-radius: 8px 0px 0px 8px;">
+                                                    <img src="./files/ic-search.svg" style="width: 20px; height: 20px; margin-right: 4px;" />
+                                                    <p style="font-size: 14px; font-weight: 400; line-height: 28px; color: #667085; margin: 0px;">Port #</p>
+                                                </span>
+
+                                                <input
+                                                    id="port"
+                                                    type="text"
+                                                    class="form-control input-without-border"
+                                                    style="font-size: 14px; font-weight: 700; line-height: 28px; padding: 10px 14px 10px 4px; border-radius: 0px 8px 8px 0px;"
+                                                    placeholder="10001"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="internetSearchButton" class="btn btn-danger search-btn-big report-button" style="margin: 0px 0px 0px 14px;">Search</button>
+                            </div>
+
+                            <div class="container mb-0 pt-3 text-white max-width" style="display: flex; align-items: center; padding: 0px;">
+                                <div style="flex: 1;">
+                                    <span id="howFindButton" class="open-popup-button custom-under-line" style="font-size: 15px; font-weight: 600; line-height: 28px;">How do I find my site</span>
+                                    <img src="./files/ic-circle-question-mark.svg" style="width: 14px; height: 14px;" />
+                                </div>
+
+                                <button id="internetSearchButton" class="btn btn-danger search-btn-small report-button" style="padding: 10px 14px; display: none;">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="pt-3 hidden"></div>
-          <div class="search-block">
-            <div class="text-white container max-width search-text">Search:</div>
-            <div class="container max-width" style="padding: 0px;display: flex;">
-              <div class="container search-input max-width" style="flex: 1;">
+
+            <div class="mb-5">
+                <div class="bg-dark" style="width: 100%;">
+                    <div class="container pl-5 pt-3 pb-3 text-white" style="width: 100%;">
+                        <div id="vulnerable-area" class="row align-items-center">
+                            <div class="col-sm-4">
+                                <div>
+                                    <center>
+                                        <img src="./files/ic_power.png" style="width: 48px; height: 50px;" />
+                                    </center>
+                                </div>
+                                <div>
+                                    <center>
+                                        <span class="hidden" id="stationGlobalValue">4866</span>
+                                        <span id="stationGlobal" style="font-weight: bold; font-size: large;">4866</span>
+                                    </center>
+                                </div>
+                                <div>
+                                    <center>VULNERABLE STATIONS GLOBAL</center>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div>
+                                    <center>
+                                        <img src="./files/ic_power_red.png" style="width: 48px; height: 50px;" />
+                                    </center>
+                                </div>
+                                <div>
+                                    <center>
+                                        <span class="hidden" id="stationUSAValue">4242</span>
+                                        <span id="stationUSA" style="font-weight: bold; font-size: large;">4242</span>
+                                    </center>
+                                </div>
+                                <div>
+                                    <center style="color: red;">VULNERABLE STATIONS USA</center>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div>
+                                    <center>
+                                        <img src="./files/ic_power.png" style="width: 48px; height: 50px;" />
+                                    </center>
+                                </div>
+                                <div>
+                                    <center>
+                                        <span class="hidden" id="stationOtherValue">624</span>
+                                        <span id="stationOther" style="font-weight: bold; font-size: large;">624</span>
+                                    </center>
+                                </div>
+                                <div>
+                                    <center>VULNERABLE STATIONS OTHER</center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div id="tankGaugesButton" class="p-3 bg-light text-dark" style="width: 100%; background-color: #eaeaea !important;">
+                    <center>
+                        Vulnerable tank gauges discoverable via Shodan.io search engine. Last updated: 17:22 12.12.2023
+                        <img src="./files/ic-circle-information.svg" style="width: 1.25rem; height: 1.25rem; margin-bottom: 0.25rem;" />
+                    </center>
+                </div>
+            </div>
+
+            <div class="mb-5">
+                <div class="mb-2 bg-secondary text-light" style="width: 100%; height: 40.5vw;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.452697041917!2d78.39076592375736!3d17.43803374982052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9144cdba8c47%3A0x937fe346f411a645!2sTutorials%20Point%20(India)%20Ltd.!5e0!3m2!1sen!2sin!4v1673629212535!5m2!1sen!2sin"
+                        frameborder="0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        width="100%"
+                        height="100%"
+                    ></iframe>
+                </div>
+            </div>
+            <div class="container lh-sm app-padding max-width" style="padding-top: 3rem;">
+                <h1>ARUME Insights</h1>
+                <p>
+                    Learn more with our insights about cyber security, connected
+                    <br />
+                    devices and critical infrastructure.
+                </p>
+            </div>
+
+            <div class="container app-padding max-width" style="padding-bottom: 2rem;">
+                <div class="mb-4">
+                    <div class="container max-width" style="padding: 0px;">
+                        <div class="row align-items-center">
+                            <div class="col-sm-6 col-lg-4 pb-2 mt-3 mb-3">
+                                <div class="card shadow-sm rounded-3 p-2">
+                                    <div class="card-body">
+                                        <img src="files/bootstrap-profile-card-image.jpg" alt="" />
+                                        <div class="mu-single-service">
+                                            <div class="mu-single-service-content">
+                                                <h6 class="card-title fw-bold">Safeguarding Against Vulnerabilties</h6>
+                                                <span class="text-secondary">PROTECTION</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 pb-2 mt-3 mb-3">
+                                <div class="card shadow-sm rounded-3 p-2">
+                                    <div class="card-body">
+                                        <img src="files/bootstrap-profile-card-image.jpg" alt="" />
+                                        <div class="mu-single-service">
+                                            <div class="mu-single-service-content">
+                                                <h6 class="card-title fw-bold">Kinds of ATG Vulnerabilties</h6>
+                                                <span class="text-secondary">PROTECTION</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-4 pb-2 mt-3 mb-3">
+                                <div class="card shadow-sm rounded-3 p-2">
+                                    <div class="card-body">
+                                        <img src="files/bootstrap-profile-card-image.jpg" alt="" />
+                                        <div class="mu-single-service">
+                                            <div class="mu-single-service-content">
+                                                <h6 class="card-title fw-bold">History of Cyber Attacks on Critical Systems</h6>
+                                                <span class="text-secondary">NEWS</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer" style="display: block; width: 100%;" class="footer-bs bg-dark text-white">
+            <div class="container app-padding max-width" style="padding-top: 10px; padding-bottom: 10px;">
                 <div class="row">
-                  <div class="col-8" style="padding: 0px 14px 0px 0px;">
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        style="border: none;padding: 10px 0px 10px 22px;border-radius: 8px 0px 0px 8px;"><img
-                          src="./files/ic-search.svg" style="width: 20px;height: 20px;"></span>
-                      <input id="domain" type="text" class="form-control input-without-border"
-                        style="font-size: 14px;font-weight: 400;line-height: 28px;padding: 10px 14px 10px 8px;border-radius: 0px 8px 8px 0px;"
-                        placeholder="Search by any words in the site name, address or by IP address">
+                    <div class="col-12 col-sm-7">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-5">
+                                <div style="display: flex;">
+                                    <p style="font-size: 1.5rem; font-weight: 500; line-height: 28px;">ARUME</p>
+                                    <b style="font-size: 1.5rem; font-weight: 500; line-height: 28px; color: #ff000c;">.</b>
+                                </div>
+                                <p style="font-weight: 600; font-size: 1rem; line-height: 24px; margin: 1.5rem 0px 0px 0.5rem;">Contact us</p>
+                                <p style="margin: 0.5rem 0px 0px 0.5rem;">
+                                    <a href="mailto:support@arume.org">support@arume.org</a>
+                                </p>
+                            </div>
+                            <div class="col-sm-6 col-md-7" style="padding-left: 20px;">
+                                <p class="footer-customize">
+                                    <a class="text-decoration-none" style="color: #ff000c;" href="./Report.html">Report Attack</a>
+                                </p>
+                                <p style="margin-top: 0.5rem;">
+                                    <a class="text-decoration-none text-white" href="./Vulnerability.html">Station Vulnerability</a>
+                                </p>
+                                <p style="margin-top: 0.5rem;">Centro comercial Moctezuma</p>
+                                <p style="margin-top: 0.5rem;">
+                                    <a class="text-decoration-none text-white" href="./Articles.html">Articles</a>
+                                </p>
+                                <p style="margin-top: 0.5rem;">Disclaimer</p>
+                                <p style="margin-top: 0.5rem;">
+                                    <a class="text-decoration-none text-white" href="./Term.html">T&amp;Cs</a>
+                                </p>
+                                <br />
+                            </div>
+                        </div>
                     </div>
-                  </div>
-
-                  <div class="col-4" style="padding: 0px;">
-                    <div class="input-group" style="display: flex;">
-                      <span class="input-group-text"
-                        style="border: none;padding-right: 0px;border-radius: 8px 0px 0px 8px;">
-                        <img src="./files/ic-search.svg" style="width: 20px;height: 20px;margin-right: 4px;">
-                        <p style="font-size: 14px;font-weight: 400;line-height: 28px;color: #667085;margin: 0px;">Port
-                          #</p>
-                      </span>
-
-                      <input id="port" type="text" class="form-control input-without-border"
-                        style="font-size: 14px;font-weight: 700;line-height: 28px;padding: 10px 14px 10px 4px;border-radius: 0px 8px 8px 0px;"
-                        placeholder="10001">
+                    <div class="col-12 col-sm-5" style="display: flex; align-self: flex-end; padding-left: 20px; justify-content: end;">
+                        <p>ARUME © 2024. All rights reserved.</p>
                     </div>
-                  </div>
                 </div>
-              </div>
-
-              <button id="internetSearchButton" class="btn btn-danger search-btn-big report-button"
-                style="margin: 0px 0px 0px 14px;">Search</button>
             </div>
-
-            <div class="container mb-0 pt-3 text-white max-width"
-              style="display: flex;align-items: center;padding: 0px;">
-              <div style="flex: 1;">
-                <span id="howFindButton" class="open-popup-button custom-under-line"
-                  style="font-size: 15px;font-weight: 600;line-height: 28px;">How do I find my site</span>
-                <img src="./files/ic-circle-question-mark.svg" style="width: 14px;height: 14px;">
-              </div>
-
-              <button id="internetSearchButton" class="btn btn-danger search-btn-small report-button"
-                style="padding: 10px 14px;display: none;">Search</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mb-5">
-      <div class="bg-dark" style="width:100%;">
-        <div class="container pl-5 pt-3 pb-3 text-white" style="width:100%">
-          <div id="vulnerable-area" class="row align-items-center">
-            <div class="col-sm-4">
-              <div>
-                <center>
-                  <img src="./files/ic_power.png" style="width:48px; height:50px">
-                </center>
-              </div>
-              <div>
-                <center>
-                  <span class="hidden" id="stationGlobalValue">4866</span>
-                  <span id="stationGlobal" style="font-weight: bold; font-size: large;">4866</span>
-                </center>
-              </div>
-              <div>
-                <center>VULNERABLE STATIONS GLOBAL</center>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div>
-                <center>
-                  <img src="./files/ic_power_red.png" style="width:48px; height:50px">
-                </center>
-              </div>
-              <div>
-                <center>
-                  <span class="hidden" id="stationUSAValue">4242</span>
-                  <span id="stationUSA" style="font-weight: bold; font-size: large;">4242</span>
-                </center>
-              </div>
-              <div>
-                <center style="color:red">VULNERABLE STATIONS USA</center>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div>
-                <center>
-                  <img src="./files/ic_power.png" style="width:48px; height:50px">
-                </center>
-              </div>
-              <div>
-                <center>
-                  <span class="hidden" id="stationOtherValue">624</span>
-                  <span id="stationOther" style="font-weight: bold; font-size: large;">624</span>
-                </center>
-              </div>
-              <div>
-                <center>VULNERABLE STATIONS OTHER</center>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div id="tankGaugesButton" class="p-3 bg-light text-dark"
-        style="width:100%;background-color: #EAEAEA !important;">
-        <center>Vulnerable tank gauges discoverable via Shodan.io search engine. Last updated: 17:22 12.12.2023 
-          <img src="./files/ic-circle-information.svg" style="width: 1.25rem; height: 1.25rem; margin-bottom: 0.25rem;">
-        </center>
-      </div>
-    </div>
-
-    <div class="mb-5">
-      <div class="mb-2 bg-secondary text-light" style="width:100%; height:40.5vw">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.452697041917!2d78.39076592375736!3d17.43803374982052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9144cdba8c47%3A0x937fe346f411a645!2sTutorials%20Point%20(India)%20Ltd.!5e0!3m2!1sen!2sin!4v1673629212535!5m2!1sen!2sin"
-          frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%"
-          height="100%"></iframe>
-      </div>
-    </div>
-    <div class="container lh-sm app-padding max-width"  style="padding-top:3rem">
-      <h1>ARUME Insights</h1>
-      <p>
-        Learn more with our insights about cyber security, connected
-        <br>
-        devices and critical infrastructure.
-      </p>
-    </div>
-
-    <div class="container app-padding max-width"  style="padding-bottom:2rem">
-      <div class="mb-4">
-        <div class="container max-width" style="padding: 0px;">
-          <div class="row align-items-center">
-            <div class="col-sm-6 col-lg-4 pb-2 mt-3 mb-3">
-                    <div class="card shadow-sm rounded-3 p-2">
-                        <div class="card-body">
-                            <img src="files/bootstrap-profile-card-image.jpg" alt="" />
-                            <div class="mu-single-service">
-                                <div class="mu-single-service-content">
-                                    <h6 class="card-title fw-bold">Safeguarding Against Vulnerabilties</h6>
-                                    <span class="text-secondary">PROTECTION</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 pb-2 mt-3 mb-3">
-                    <div class="card shadow-sm rounded-3 p-2">
-                        <div class="card-body">
-                            <img src="files/bootstrap-profile-card-image.jpg" alt="" />
-                            <div class="mu-single-service">
-                                <div class="mu-single-service-content">
-                                    <h6 class="card-title fw-bold">Kinds of ATG Vulnerabilties</h6>
-                                    <span class="text-secondary">PROTECTION</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 pb-2 mt-3 mb-3">
-                    <div class="card shadow-sm rounded-3 p-2">
-                        <div class="card-body">
-                            <img src="files/bootstrap-profile-card-image.jpg" alt="" />
-                            <div class="mu-single-service">
-                                <div class="mu-single-service-content">
-                                    <h6 class="card-title fw-bold">History of Cyber Attacks on Critical Systems</h6>
-                                    <span class="text-secondary">NEWS</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer id="footer" style="display: block; width: 100%" class="footer-bs bg-dark text-white">
-    <div class="container app-padding max-width" style="padding-top: 10px; padding-bottom: 10px;">
-      <div class="row">
-        <div class="col-12 col-sm-7">
-          <div class="row">
-            <div class="col-sm-6 col-md-5">
-              <div style="display: flex;">
-                <p style="font-size: 1.5rem; font-weight: 500; line-height: 28px;">ARUME</p>
-                <b style="font-size: 1.5rem; font-weight: 500; line-height: 28px; color: #FF000C;">.</b>
-              </div>
-              <p style="font-weight: 600; font-size: 1rem; line-height: 24px; margin: 1.5rem 0px 0px 0.5rem;">Contact us
-              </p>
-              <p style="margin: 0.5rem 0px 0px 0.5rem;">
-                <a href="mailto:support@arume.org">support@arume.org</a>
-              </p>
-            </div>
-            <div class="col-sm-6 col-md-7" style="padding-left: 20px;">
-              <p class="footer-customize">
-                <a class="text-decoration-none" style="color: #FF000C;" href="./Report.html">Report Attack</a>
-              </p>
-              <p style="margin-top: 0.5rem;">
-                <a class="text-decoration-none text-white" href="./Vulnerability.html">Station Vulnerability</a>
-              </p>
-              <p style="margin-top: 0.5rem;">Centro comercial Moctezuma</p>
-              <p style="margin-top: 0.5rem;">
-                <a class="text-decoration-none text-white" href="./Articles.html">Articles</a>
-              </p>
-              <p style="margin-top: 0.5rem;">Disclaimer</p>
-              <p style="margin-top: 0.5rem;">
-                <a class="text-decoration-none text-white" href="./Term.html">T&amp;Cs</a>
-              </p>
-              <br>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-sm-5" style="display: flex;align-self: flex-end; padding-left: 20px;justify-content: end;">
-          <p>ARUME © 2024. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-</body>
-
+        </footer>
+    </body>
 </html>
 
 <script src="./script/modal.js"></script>
 <script src="./script/search-validation.js"></script>
 <script type="text/javascript">
-  countUpSection();
+    countUpSection();
 
-  // count up section
-  function updateStationValue(name, time) {
-    const value = document.getElementById(name + "Value").textContent;
-    document.getElementById(name).innerHTML = Math.ceil((value / 10) * time);
-  }
-
-  function countUpSection() {
-    let count = 1;
-    let showValueInterval = setInterval(showValue, 150);
-    function showValue() {
-      if (count === 10) clearInterval(showValueInterval);
-
-      updateStationValue("stationGlobal", count);
-      updateStationValue("stationUSA", count);
-      updateStationValue("stationOther", count);
-
-      count++;
+    // count up section
+    function updateStationValue(name, time) {
+        const value = document.getElementById(name + "Value").textContent;
+        document.getElementById(name).innerHTML = Math.ceil((value / 10) * time);
     }
-  }
 
-  document.getElementById("howFindButton").addEventListener("click", () => openPopup("howFindModal"));
-  document.getElementById("tankGaugesButton").addEventListener("click", () => openPopup("tankGaugesModal"));
-  document.getElementById("whyImportantButton").addEventListener("click", () => {
-    window.location.href = `./ArticleDetail.html?item-id=1`;
-  });
+    function countUpSection() {
+        let count = 1;
+        let showValueInterval = setInterval(showValue, 150);
+        function showValue() {
+            if (count === 10) clearInterval(showValueInterval);
 
-  var isCounted = false;
-  window.addEventListener('scroll', function () {
-    var vulnerableArea = document.getElementById('vulnerable-area');
+            updateStationValue("stationGlobal", count);
+            updateStationValue("stationUSA", count);
+            updateStationValue("stationOther", count);
 
-    // Get the position of the top of the div relative to the viewport
-    var rect = vulnerableArea.getBoundingClientRect();
-    var isVisible = (rect.top <= window.innerHeight) && (rect.bottom >= 0);
-
-    // Apply styles based on visibility
-    if (isVisible && !isCounted) {
-      isCounted = true;
-      countUpSection();
+            count++;
+        }
     }
-  });
+
+    document.getElementById("howFindButton").addEventListener("click", () => openPopup("howFindModal"));
+    document.getElementById("tankGaugesButton").addEventListener("click", () => openPopup("tankGaugesModal"));
+    document.getElementById("whyImportantButton").addEventListener("click", () => {
+        window.location.href = `./ArticleDetail.html?item-id=1`;
+    });
+
+    var isCounted = false;
+    window.addEventListener("scroll", function () {
+        var vulnerableArea = document.getElementById("vulnerable-area");
+
+        // Get the position of the top of the div relative to the viewport
+        var rect = vulnerableArea.getBoundingClientRect();
+        var isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+        // Apply styles based on visibility
+        if (isVisible && !isCounted) {
+            isCounted = true;
+            countUpSection();
+        }
+    });
 </script>
