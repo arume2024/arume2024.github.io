@@ -50,27 +50,29 @@
     .footer-customize {
       margin-top: 5.25rem;
     }
+
+    .content-top-text {
+        margin-left: 12%;
+        margin-top: 2.4vw;
+        padding-top: 4.33vw;
+    }
     .content-top-image {
       background-image: url('files/sub-header1.png');
       background-size: auto 100%;
       background-repeat: no-repeat;
       width: 100%;
-      /* height: 700px; */
-      height: 49vw;
-      padding-left: 8%;
-      /* padding-top: 200px; */
-      padding-top: 10.5vw;
-      /* min-height: 200px; */
+      height: 40vw;
+      background-size: cover;
+      margin-top: 82px;
     }
     .text-inside-image {
       /* font-size: 80px; */
-      font-size: 5.6vw;
+      font-size: 6.7vw;
       font-weight: 700;
       /* line-height: 96px; */
       line-height: 6.7vw;
       letter-spacing: -0.02em;
       text-align: left;
-      padding-left: 4vw;
     }
 
     .card {
@@ -88,10 +90,13 @@
     }
 
     @media screen and (max-width: 576px) {
-      .content-top-image {
-        padding-top: 7vh;
+      
+      .content-top-text {
+          margin-left: 2%;
       }
       .text-inside-image {
+        font-size: 27px;
+        line-height: 27px;
         padding-left: unset;
       }
 
@@ -104,17 +109,18 @@
     }
 
     @media screen and (min-width: 577px) and (max-width: 768px) {
-      .content-top-image {
-        padding-top: 7vh;
-      }
+      
       .text-inside-image {
         padding-left: unset;
+      }
+      .content-top-text {
+          margin-left: 4%;
       }
     }
     
     @media screen and (min-width: 768px) and (max-width: 1023px) {
-      .content-top-image {
-        padding-top: 7vh;
+      .content-top-text {
+          margin-left: 6%;
       }
       .text-inside-image {
         padding-left: unset;
@@ -149,7 +155,7 @@
 
   <main class="content">
     <div class="content-top-image">
-      <div>
+      <div class="lh-1 content-top-text">
         <h1 class="text-white text-inside-image">Safeguarding</h1>
         <h1 class="text-white text-inside-image">Infrastructure Fueling</h1>
         <h1 class="text-white text-inside-image">America's Way of Life</h1>
