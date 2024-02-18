@@ -131,6 +131,7 @@
                 position: sticky;
                 top: 90px;
                 padding-bottom: 8rem !important;
+                font-size: large;
             }
 
             @media screen and (max-width: 576px) {
@@ -147,13 +148,7 @@
                 }
 
                 .menu-left-panel {
-                    width: 80% !important;
-                    border-right: 0px !important;
-                    border-bottom: 1px solid #dee2e6 !important;
-                    margin-bottom: 2rem;
-                    position: relative !important;
-                    top: 0px !important;
-                    padding-bottom: 1rem !important;
+                    display: none;
                 }
 
                 .content-top-title {
@@ -170,15 +165,9 @@
                 }
             }
 
-            @media screen and (min-width: 577px) and (max-width: 768px) {
+            @media screen and (min-width: 577px) and (max-width: 767px) {
                 .menu-left-panel {
-                    width: 80% !important;
-                    border-right: 0px !important;
-                    border-bottom: 1px solid #dee2e6 !important;
-                    margin-bottom: 2rem;
-                    position: relative !important;
-                    top: 0px !important;
-                    padding-bottom: 1rem !important;
+                    display: none;
                 }
                 .content-top-text {
                     margin-left: 7%;
@@ -198,13 +187,7 @@
 
             @media screen and (min-width: 768px) and (max-width: 1023px) {
                 .menu-left-panel {
-                    width: 80% !important;
-                    border-right: 0px !important;
-                    border-bottom: 1px solid #dee2e6 !important;
-                    margin-bottom: 2rem;
-                    position: relative !important;
-                    top: 0px !important;
-                    padding-bottom: 1rem !important;
+                    display: none;
                 }
             }
         </style>
@@ -250,7 +233,7 @@
             <div class="container" style="padding-top: 90px; padding-bottom: 40px;">
                 <div class="row">
                     <div class="menu-left-panel col-2">
-                        <p id="vulnerability-prevention-button" style="margin-bottom: 32px;">
+                        <p id="vulnerability-prevention-button" style="margin-bottom: 32px;" class="menu-item-selected">
                             <a href="#section-vulnerability-prevention" style="text-decoration: none; color: inherit;">
                                 Vulnerability Prevention
                             </a>
