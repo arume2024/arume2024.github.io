@@ -58,6 +58,12 @@ nav {
   .nav-link {
     text-align: right;
   }
+
+  .report-button-border {
+    display: flex;
+    justify-content: end;
+    padding: 8px 16px;
+  }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
