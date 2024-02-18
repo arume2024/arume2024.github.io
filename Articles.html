@@ -56,11 +56,6 @@
         margin-top: 0.5rem;
       }
     }
-    @media screen and (max-width: 767px) {
-      .page-title-top-padding {
-        height: 11.5vh !important;
-      }
-    }
 
     .content-title {
       font-weight: 500;
@@ -78,6 +73,24 @@
       margin-bottom: 0.5rem;
       color: #667085;
       text-align: left;
+    }
+
+    .big-text-inside-image {
+      /* font-size: 96px; */
+      font-size: 6.7vw;
+      font-weight: 700;
+      /* line-height: 96px; */
+      line-height: 6.7vw;
+      letter-spacing: -0.02em;
+      text-align: left;
+      color: #181818;
+    }
+
+    @media screen and (max-width: 576px) {
+      .big-text-inside-image {
+        font-size: 27px;
+        line-height: 27px;
+      }
     }
   </style>
 </head>
@@ -107,11 +120,9 @@
   </nav>
 
   <main>
-    <div class="container" style="padding: 0px;background-color: black;max-width: 100%;">
-      <div class="page-title-top-padding" style="height: 8.5vh;"></div>
+    <div style="padding-top: 100px;background-color: black;max-width: 100%;">
       <div style="height: 18.2vw;align-items: center;justify-content: center;">
-        <p
-          style="color: white;font-weight: 700;font-size: 5vw;line-height: 5vw;text-align: left;">Articles</p>
+        <p class="lh-1 big-text-inside-image text-white app-padding">Articles</p>
       </div>
     </div>
     <div class="container"
