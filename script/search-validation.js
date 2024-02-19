@@ -1,8 +1,3 @@
-document.getElementById("dbSearchButton").addEventListener("click", () => {
-  const searchText = document.getElementById("dbSearchText").value;
-  window.location.href = `./Result.html?search=${searchText}`;
-});
-
 function gotoSearchResult() {
   const domain = document.getElementById("domain");
   if (!domain.value) {

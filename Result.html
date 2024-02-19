@@ -123,6 +123,72 @@
       padding: 0px 0px 6px 0px;
     }
 
+    .vulnerable-results-for {
+      padding: 0px 0px 48px 0px;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-start;
+
+      font-size: 48px;
+      font-weight: 700; 
+      color: #181818; 
+      margin-bottom: 0px;
+    }
+
+    .vulnerable-results-for-text-black {
+      font-size: inherit;
+      font-weight: inherit; 
+      color: #181818; 
+      margin-bottom: inherit;
+      padding: unset;
+    }
+
+    .vulnerable-results-for-text-red  {
+      font-size: inherit;
+      font-weight: inherit; 
+      color: #FF000C; 
+      margin-bottom: inherit;
+      padding: unset;
+    }
+
+    .body-content {
+      margin-left: 12vw;
+      margin-right: 12vw;
+      text-align: left;
+    }
+
+    .result-gray-panel {
+      font-size: 16px;
+      font-weight: 400;
+      color: #667085; 
+      padding: 16px; 
+      width: 100%;
+      background-color: #EAEAEA;
+      text-align: center;
+    }
+
+    .column-title {
+      background-color: #181818;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      max-width: 100%;
+      margin: 0px;
+      padding: 12px 0px;
+    }
+
+    .index-column {
+      font-size: 18px;
+      font-weight: 700;
+      color: black; 
+      text-align: left;
+      width: 1vw;
+    }
+
+    .button {
+      cursor: pointer;
+    }
+
     @media screen and (max-width: 576px) {
       .footer-customize {
         margin-top: 0.5rem;
@@ -160,8 +226,8 @@
     <label id="totalResultValue" class="d-none">20</label>
     <label id="ipAddressValue" class="d-none">192.0.2.1</label>
     <label id="portValue" class="d-none">10001</label>
-    <label id="currentPageValue" class="d-none">2</label>
-    <label id="maxPageValue" class="d-none">5</label>
+    <label id="currentPageValue" class="d-none">1</label>
+    <label id="maxPageValue" class="d-none">3</label>
     <div id="howFindModal" class="modal">
       <div class="modal-content"
         style="border-radius: 12px;padding: 24px;box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);">
@@ -173,6 +239,49 @@
           <p>If your site isn’t displayed in results this does not mean your site is not vulnerable. It is recommended
             that all owner/operators of sites using tank gauges check back as we update the list of vulnerable sites
             regularly.</p>
+        </div>
+        <center class="close"
+          style="font-weight: 600;font-size: 16px;line-height: 24px;border-radius: 8px;padding: 10px 18px;color: #344054;">
+          Okay</center>
+      </div>
+    </div>
+    <div id="scoreDescriptionModal" class="modal">
+      <div class="modal-content"
+        style="border-radius: 12px;padding: 24px;box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);">
+        <div>
+          <h6 class="modal-title">Vulnerability Score Explained</h6>
+          <div class="row mb-3">
+            <div class="col-1">
+              <img src="./files/serve.png"/>
+            </div>
+            <div class="col-11">
+              <p class="mt-3 px-lg-2">Your site has been rated a ‘SEVERE’ score for vulnerability.</p>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-1">
+              <img src="./files/moderate.png"/>
+            </div>
+            <div class="col-11">
+              <p class="mt-3 px-lg-2">Your site has been rated a ‘MODERATE’ score for vulnerability.</p>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-1">
+              <img src="./files/caution.png"/>
+            </div>
+            <div class="col-11">
+              <p class="mt-3 px-lg-2">Your site has been rated a ‘CAUTION’ score for vulnerability.</p>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-1">
+              <img src="./files/secure.png"/>
+            </div>
+            <div class="col-11">
+              <p class="mt-3 mb-4 px-lg-2">Your site has been rated a ‘SECURE’ score for vulnerability.</p>
+            </div>
+          </div>
         </div>
         <center class="close"
           style="font-weight: 600;font-size: 16px;line-height: 24px;border-radius: 8px;padding: 10px 18px;color: #344054;">
@@ -234,202 +343,256 @@
       </div>
     </div>
 
-    <div class="search-result mb-4">
-      <b id="totalResult" style="color: #FF000C;"></b>
-      <b>vulnerable results for </b>
-      <b id="searchKey" style="color: #FF000C;"></b>
-      <h1 id="ipAddress" style="color: red;"></h1>
-      <h1 id="portSearch" style="color: red;"></h1>
-    </div>
-    <div id="has-result">
-      <div>
-        <div class="p-3 bg-light text-dark" style="width:100%">
-          <center>Vulnerable tank gauges discoverable via Shodan.io search engine. Last updated: 17:22 12.12.2023 (?)
-          </center>
+    <div class="body-content">
+      <div class="vulnerable-results-for">
+        <p id="totalResult" class="vulnerable-results-for-text-red"></p>
+        &nbsp;
+        <p class="vulnerable-results-for-text-black">vulnerable results for</p>
+        &nbsp;
+        <p id="searchKey" class="vulnerable-results-for-text-red"></p>
+      </div>
+
+      <div id="has-result" class="has-result">
+        <p class="result-gray-panel">
+          Vulnerable tank gauges discoverable via Shodan.io search engine. Last updated: 13:24PM 12.12.2023</p>
+        <div class="container column-title">
+          <div class="row">
+            <p class="col-4 text-start">STATION INFORMATION</p>
+            <p class="col-2">TANK VOLUME</p>
+            <p class="col-4 text-center">VULNERABILITY SCORE <img id="scoreDescriptionButton" src="./files/ic-info-outline.svg"
+                style="width: 20px;height: 20px;margin-right: 24px;"
+                onclick="openPopup('scoreDescriptionModal')"></img></p>
+          </div>
+        </div>
+        <div class="container column-content" style="max-width: 100%;margin: 0px;">
+          
+          <div id="item-1" class="item">
+            <div class="row" style="margin-bottom: 8px; margin-top: 24px;">
+              <p class="index-column">1</p>
+              <div class="col-5" style="font-size: 18px; font-weight: 400; color: #667085;">
+                <p style="font-weight: 700; color: black; margin-bottom: 0.5rem;">Whitinsville Gulf</p>
+                <p style="line-height: normal;">119 MAIN ST SUDLERSVILLE MD</p>
+                <p style="margin-bottom: 0.5rem;">21888 Massachusetts</p>
+                <p>Unbranded (toll-free)</p>
+              </div>
+              <div class="col-2" style="font-size: 18px;font-weight: 400;color: #667085;">
+                <p>TANK #1</p>
+                <p>DIESEL</p>
+                <p>7,000 GAL</p>
+                <p>11:24AM</p>
+                <p>12.12.2023</p>
+              </div>
+              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
+                <img class="img-fluid" src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
+              </div>
+              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=1'">
+                <p
+                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
+                  Inspect Site</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+          
+          <div id="item-2" class="item">
+            <div class="row" style="margin-bottom: 8px; margin-top: 24px;">
+              <p class="index-column">2</p>
+              <div class="col-5" style="font-size: 18px; font-weight: 400; color: #667085;">
+                <p style="font-weight: 700; color: black; margin-bottom: 0.5rem;">Whitinsville Gulf</p>
+                <p style="line-height: normal;">119 MAIN ST SUDLERSVILLE MD</p>
+                <p style="margin-bottom: 0.5rem;">21888 Massachusetts</p>
+                <p>Unbranded (toll-free)</p>
+              </div>
+              <div class="col-2" style="font-size: 18px;font-weight: 400;color: #667085;">
+                <p>TANK #1</p>
+                <p>DIESEL</p>
+                <p>7,000 GAL</p>
+                <p>11:24AM</p>
+                <p>12.12.2023</p>
+              </div>
+              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
+                <img class="img-fluid" src="./files/moderate.png" onclick="openPopup('scoreDescriptionModal')" />
+              </div>
+              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=2'">
+                <p
+                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
+                  Inspect Site</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+          
+          <div id="item-3" class="item">
+            <div class="row" style="margin-bottom: 8px; margin-top: 24px;">
+              <p class="index-column">3</p>
+              <div class="col-5" style="font-size: 18px; font-weight: 400; color: #667085;">
+                <p style="font-weight: 700; color: black; margin-bottom: 0.5rem;">Whitinsville Gulf</p>
+                <p style="line-height: normal;">119 MAIN ST SUDLERSVILLE MD</p>
+                <p style="margin-bottom: 0.5rem;">21888 Massachusetts</p>
+                <p>Unbranded (toll-free)</p>
+              </div>
+              <div class="col-2" style="font-size: 18px;font-weight: 400;color: #667085;">
+                <p>TANK #1</p>
+                <p>DIESEL</p>
+                <p>7,000 GAL</p>
+                <p>11:24AM</p>
+                <p>12.12.2023</p>
+              </div>
+              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
+                <img class="img-fluid" src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
+              </div>
+              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=3'">
+                <p
+                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
+                  Inspect Site</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+          
+          <div id="item-4" class="item">
+            <div class="row" style="margin-bottom: 8px; margin-top: 24px;">
+              <p class="index-column">4</p>
+              <div class="col-5" style="font-size: 18px; font-weight: 400; color: #667085;">
+                <p style="font-weight: 700; color: black; margin-bottom: 0.5rem;">Whitinsville Gulf</p>
+                <p style="line-height: normal;">119 MAIN ST SUDLERSVILLE MD</p>
+                <p style="margin-bottom: 0.5rem;">21888 Massachusetts</p>
+                <p>Unbranded (toll-free)</p>
+              </div>
+              <div class="col-2" style="font-size: 18px;font-weight: 400;color: #667085;">
+                <p>TANK #1</p>
+                <p>DIESEL</p>
+                <p>7,000 GAL</p>
+                <p>11:24AM</p>
+                <p>12.12.2023</p>
+              </div>
+              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
+                <img class="img-fluid" src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
+              </div>
+              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=4'">
+                <p
+                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
+                  Inspect Site</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+          
+          <div id="item-5" class="item">
+            <div class="row" style="margin-bottom: 8px; margin-top: 24px;">
+              <p class="index-column">5</p>
+              <div class="col-5" style="font-size: 18px; font-weight: 400; color: #667085;">
+                <p style="font-weight: 700; color: black; margin-bottom: 0.5rem;">Whitinsville Gulf</p>
+                <p style="line-height: normal;">119 MAIN ST SUDLERSVILLE MD</p>
+                <p style="margin-bottom: 0.5rem;">21888 Massachusetts</p>
+                <p>Unbranded (toll-free)</p>
+              </div>
+              <div class="col-2" style="font-size: 18px;font-weight: 400;color: #667085;">
+                <p>TANK #1</p>
+                <p>DIESEL</p>
+                <p>7,000 GAL</p>
+                <p>11:24AM</p>
+                <p>12.12.2023</p>
+              </div>
+              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
+                <img class="img-fluid" src="./files/moderate.png" onclick="openPopup('scoreDescriptionModal')" />
+              </div>
+              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=5'">
+                <p
+                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
+                  Inspect Site</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+          
+          <div id="item-6" class="item">
+            <div class="row" style="margin-bottom: 8px; margin-top: 24px;">
+              <p class="index-column">6</p>
+              <div class="col-5" style="font-size: 18px; font-weight: 400; color: #667085;">
+                <p style="font-weight: 700; color: black; margin-bottom: 0.5rem;">Whitinsville Gulf</p>
+                <p style="line-height: normal;">119 MAIN ST SUDLERSVILLE MD</p>
+                <p style="margin-bottom: 0.5rem;">21888 Massachusetts</p>
+                <p>Unbranded (toll-free)</p>
+              </div>
+              <div class="col-2" style="font-size: 18px;font-weight: 400;color: #667085;">
+                <p>TANK #1</p>
+                <p>DIESEL</p>
+                <p>7,000 GAL</p>
+                <p>11:24AM</p>
+                <p>12.12.2023</p>
+              </div>
+              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
+                <img class="img-fluid" src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
+              </div>
+              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=6'">
+                <p
+                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
+                  Inspect Site</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1"></div>
+              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+  
+          <div class="row" style="margin-top: 24px; margin-bottom: 100px;">
+            <div class="col-12">
+              <div id="pagination" class="pagination" style="padding-left: 0%;">
+                <a class="left-arrow hidden" href="#">&lt;</a>
+                <a class="active" href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a class="right-arrow" href="#">&gt;</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <table id="mainTable">
-        <tr>
-          <th style="width: 40%;">STATION INFORMATION</th>
-          <th style="width: 20%;" class="center">TANK VOLUME</th>
-          <th style="width: 20%;" class="center">VULNERABILITY SCORE</th>
-          <th style="width: 20%;"></th>
-        </tr>
-        <tr>
-          <td style="display: none;">red</td>
-          <td>
-            <div>
-              <div class="bold">Whitinsville Gulf</div>
-              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
-              <div>Unbranded (toll-free)</div>
-            </div>
-          </td>
-          <td class="center">
-            <p>TANK #1</p>
-            <p>DIESEL</p>
-            <p>7,000 GAL</p>
-            <p>11:24AM</p>
-            <p>12.12.2023</p>
-          </td>
-          <td class="center"><span class="dot">!</span></td>
-          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=1'">Inspect</button>
-          </td>
-        </tr>
-        <tr>
-          <td style="display: none;">amber</td>
-          <td>
-            <div>
-              <div class="bold">Whitinsville Gulf</div>
-              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
-              <div>Unbranded (toll-free)</div>
-            </div>
-          </td>
-          <td class="center">
-            <p>TANK #1</p>
-            <p>DIESEL</p>
-            <p>7,000 GAL</p>
-            <p>11:24AM</p>
-            <p>12.12.2023</p>
-          </td>
-          <td class="center"><span class="dot">!</span></td>
-          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=2'">Inspect</button>
-          </td>
-        </tr>
-        <tr>
-          <td style="display: none;">red</td>
-          <td>
-            <div>
-              <div class="bold">Whitinsville Gulf</div>
-              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
-              <div>Unbranded (toll-free)</div>
-            </div>
-          </td>
-          <td class="center">
-            <p>TANK #1</p>
-            <p>DIESEL</p>
-            <p>7,000 GAL</p>
-            <p>11:24AM</p>
-            <p>12.12.2023</p>
-          </td>
-          <td class="center"><span class="dot">!</span></td>
-          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=3'">Inspect</button>
-          </td>
-        </tr>
-        <tr>
-          <td style="display: none;">yellow</td>
-          <td>
-            <div>
-              <div class="bold">Whitinsville Gulf</div>
-              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
-              <div>Unbranded (toll-free)</div>
-            </div>
-          </td>
-          <td class="center">
-            <p>TANK #1</p>
-            <p>DIESEL</p>
-            <p>7,000 GAL</p>
-            <p>11:24AM</p>
-            <p>12.12.2023</p>
-          </td>
-          <td class="center"><span class="dot">!</span></td>
-          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=4'">Inspect</button>
-          </td>
-        </tr>
-        <tr>
-          <td style="display: none;">red</td>
-          <td>
-            <div>
-              <div class="bold">Whitinsville Gulf</div>
-              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
-              <div>Unbranded (toll-free)</div>
-            </div>
-          </td>
-          <td class="center">
-            <p>TANK #1</p>
-            <p>DIESEL</p>
-            <p>7,000 GAL</p>
-            <p>11:24AM</p>
-            <p>12.12.2023</p>
-          </td>
-          <td class="center"><span class="dot">!</span></td>
-          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=5'">Inspect</button>
-          </td>
-        </tr>
-        <tr>
-          <td style="display: none;">red</td>
-          <td>
-            <div>
-              <div class="bold">Whitinsville Gulf</div>
-              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
-              <div>Unbranded (toll-free)</div>
-            </div>
-          </td>
-          <td class="center">
-            <p>TANK #1</p>
-            <p>DIESEL</p>
-            <p>7,000 GAL</p>
-            <p>11:24AM</p>
-            <p>12.12.2023</p>
-          </td>
-          <td class="center"><span class="dot">!</span></td>
-          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=6'">Inspect</button>
-          </td>
-        </tr>
-        <tr>
-          <td style="display: none;">red</td>
-          <td>
-            <div>
-              <div class="bold">Whitinsville Gulf</div>
-              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
-              <div>Unbranded (toll-free)</div>
-            </div>
-          </td>
-          <td class="center">
-            <p>TANK #1</p>
-            <p>DIESEL</p>
-            <p>7,000 GAL</p>
-            <p>11:24AM</p>
-            <p>12.12.2023</p>
-          </td>
-          <td class="center"><span class="dot">!</span></td>
-          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=7'">Inspect</button>
-          </td>
-        </tr>
-      </table>
-      <div id="pagination" class="pagination app-padding">
-        <a href="./Result.html?search=Kwik&page=1">&lt;</a>
-        <a href="./Result.html?search=Kwik&page=1">1</a>
-        <a class="active">2</a>
-        <a href="./Result.html?search=Kwik&page=3">3</a>
-        <a href="./Result.html?search=Kwik&page=4">4</a>
-        <a href="./Result.html?search=Kwik&page=5">5</a>
-        <a href="./Result.html?search=Kwik&page=6">6</a>
-        <a href="./Result.html?search=Kwik&page=3">&gt;</a>
-      </div>
-    </div>
-    <div id="no-result" class="no-result container" style="max-width: 100%;margin: 96px 0px;">
-      <div class="row">
-        <div class="col-1"></div>
-        <div class="col-9">
-          <p style="font-weight: 600;">We did not find any sites matching your current search
-            criteria.</p>
-          <p style="font-weight: 600; color: #FF000C; margin-bottom: 40px;">This does not necessarily mean your site
-            is secure.
-          </p>
-          <p>A few things could cause no results:</p>
-          <ul>
-            <li>You may need to try different search terms or parameters to find results.</li>
-            <li>The current scanner is limited and some sites could still be vulnerable despite not appearing in our
-              results.</li>
-            <li>Your sites may be password protected. In the future, we aim to allow checking if your specific sites
-              are
-              properly password protected.</li>
-          </ul>
-          <p style="margin-top: 40px;">Check back often as more vulnerable sites are found each day.</p>
+  
+      <div id="no-result" class="no-result" style="max-width: 100%; margin: 48px 0px;">
+        <div class="row">
+          <div class="col-9">
+            <p style="font-weight: 600;">We did not find any sites matching your current search
+              criteria.</p>
+            <p class="mb-5" style="font-weight: 600; color: #FF000C;">This does not necessarily mean your site is secure.
+            </p>
+            <p class="mb-3">A few things could cause no results:</p>
+            <ul class="mb-5">
+              <li class="mb-2">You may need to try different search terms or parameters to find results.</li>
+              <li class="mb-2">The current scanner is limited and some sites could still be vulnerable despite not appearing in our
+                results.</li>
+              <li class="mb-2">Your sites may be password protected. In the future, we aim to allow checking if your specific sites are
+                properly password protected.</li>
+            </ul>
+            <p class="mb-5 pb-5">Check back often as more vulnerable sites are found each day.</p>
+          </div>
         </div>
-        <div class="col-2"></div>
       </div>
     </div>
+    
   </main>
 
   <footer id="footer" style="display: block; width: 100%" class="footer-bs bg-dark text-white">
@@ -488,19 +651,6 @@
   updateTotalResult();
   buildPagination();
 
-  var table = document.getElementById("mainTable");
-  for (var i = 0, row; row = table.rows[i]; i++) {
-    if (row.cells[0].innerText === 'amber') {
-      row.cells[3].innerHTML = '<span class="dot background-amber">!</span>';
-    }
-    if (row.cells[0].innerText === 'yellow') {
-      row.cells[3].innerHTML = '<span class="dot background-yellow">!</span>';
-    }
-    if (row.cells[0].innerText === 'red') {
-      row.cells[3].innerHTML = '<span class="dot background-red">!</span>';
-    }
-  }
-
   function updateTotalResult() {
     const totalResult = document.getElementById("totalResultValue").textContent;
     document.getElementById("totalResult").textContent = totalResult;
@@ -532,6 +682,7 @@
     if (currentPage && maxPage) {
       const pagination = document.getElementById("pagination");
       paginationHTML = '';
+
       if (currentPage !== 1) {
         paginationHTML += buildPaginationHtml("&lt", currentPage - 1);
       }
