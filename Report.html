@@ -1,279 +1,353 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="TSA Team">
-    <meta name="generator" content="TSA">
-    <title>Report Site</title>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="TSA Team" />
+        <meta name="generator" content="TSA" />
+        <title>ARUME - Report</title>
+        <meta
+            name="description"
+            content="ARUME allows you to check fuel tank gauges exposed
+    on the internet. Test your sites' security and protect our
+    nation's critical infrastructure from cyber attacks."
+        />
+        <title>ARUME</title>
+        <link rel="shortcut icon" href="./favicon.ico" />
 
-    <!-- Bootstrap core CSS -->
-    <link href="./files/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/modal.css" rel="stylesheet">
-    <link href="./css/header.css" rel="stylesheet">
-    <link href="./css/ultil.css" rel="stylesheet">
-    <script src="./script/jquery-3.7.1.min"></script>
-    <script src="./script/bootstrap.js"></script>
-    <meta name="theme-color" content="#7952b3">
+        <!-- Bootstrap core CSS -->
+        <link href="./files/bootstrap.min.css" rel="stylesheet" />
+        <link href="./css/modal.css" rel="stylesheet" />
+        <link href="./css/header.css" rel="stylesheet" />
+        <link href="./css/ultil.css" rel="stylesheet" />
+        <script src="./script/jquery-3.7.1.min"></script>
+        <script src="./script/bootstrap.js"></script>
+        <meta name="theme-color" content="#7952b3" />
 
-<style>
-  footer p {
-    margin: 0px;
-    font-size: 16;
-  }
-  body {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-  }
-  .content {
-      flex: 1;
-      min-height: 120vh;
-  }
-  .footer {
-      background-color: #f5f5f5;
-      text-align: center;
-      padding: 10px 0;
-  }
-  .main-form {
-    position: absolute;
-    left: 20%;
-    width: 60%;
-    top: 42vw;
-  }
-  .content-top-title {
-    padding-left: 8%;
-    /* font-size: 96px; */
-    font-size: 6.78vw;
-    font-weight: 700;
-    /* line-height: 96px; */
-    line-height: 6.78vw;
-    letter-spacing: -0.02em;
-    text-align: left;
-    /* padding-top: 60px; */
-    padding-top: 7vw;
-    /* padding-bottom: 40px; */
-    padding-bottom: 2.8vw;
+        <style>
+            footer p {
+                margin: 0px;
+                font-size: 16;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+            }
+            .content {
+                flex: 1;
+                min-height: 120vh;
+            }
+            .footer {
+                background-color: #f5f5f5;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .footer-customize {
+                margin-top: 5.25rem;
+            }
+            .main-form {
+                position: absolute;
+                left: 30%;
+                width: 40%;
+                top: 42vw;
+            }
+            .mainmargin {
+              margin-bottom: 20%;
+            }
+            .content-top-title {
+                padding-left: 12%;
+                /* font-size: 96px; */
+                font-size: 6.78vw;
+                font-weight: 700;
+                /* line-height: 96px; */
+                line-height: 6.78vw;
+                letter-spacing: -0.02em;
+                text-align: left;
+                /* padding-top: 60px; */
+                padding-top: 4.3vw;
+                /* padding-bottom: 40px; */
+                padding-bottom: 1.7vw;
 
-    p {
-      margin-bottom: 0px;
-    }
-  }
-  .content-top-content {
-    padding-left: 8%;
-    /* font-size: 24px; */
-    font-size: 1.69vw;
-    font-weight: 400;
-    /* line-height: 28px; */
-    line-height: 1.97vw;
-    letter-spacing: 0em;
-    text-align: left;
-    p {
-      margin-bottom: 0px;
-    }
-  }
-  .row-background { 
-      background-image: url('./files/sub-header.jpg');
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      width: 100%;
-      /* height: 700px; */
-      height: 40vw;
-      /* height: 49.5vw; */
-      background-size: cover;
-      margin-top: 82px !important;
-  }
-  .display-error {
-    display: block;
-    color: red;
-  }
-  .hide-error {
-    display: none;
-    color: red;
-  }
-  @media screen and (max-width: 429px) {
-    .main-form {
-      left: 10%;
-      width: 80%;
-      top: 56vw;
-    }
-  }
-  @media screen and (min-width: 430px) and (max-width: 577px){
-    .main-form {
-      left: 10%;
-      width: 80%;
-      top: 53vw;
-    }
-  }
-  @media screen and (min-width: 578px) and (max-width: 768px) {
-    .main-form {
-      left: 15%;
-      width: 70%;
-      top: 48vw;
-    }
-  }
-  @media screen and (min-width: 769px) and (max-width: 992px) {
-    .main-form {
-      left: 17%;
-      width: 66%;
-      top: 45vw;
-    }
-  }
-  @media screen and (min-width: 993px) and (max-width: 1090px) {
-    .main-form {
-      top: 43vw;
-    }
-  }
-</style>
-</head>
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+            .content-top-content {
+                padding-left: 12%;
+                /* font-size: 24px; */
+                font-size: 1.26vw;
+                font-weight: 300;
+                /* line-height: 28px; */
+                line-height: 1.97vw;
+                letter-spacing: 0em;
+                text-align: left;
+                p {
+                    margin-bottom: 0px;
+                }
+            }
+            .row-background {
+                background-image: url("./files/sub-header.jpg");
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+                width: 100%;
+                /* height: 700px; */
+                height: 40vw;
+                /* height: 49.5vw; */
+                background-size: cover;
+                margin-top: 82px !important;
+            }
+            .display-error {
+                display: block;
+                color: red;
+            }
+            .hide-error {
+                display: none;
+                color: red;
+            }
+            @media screen and (max-width: 429px) {
+                .main-form {
+                    left: 10%;
+                    width: 80%;
+                    top: 56vw;
+                }
+            }
+            @media screen and (min-width: 430px) and (max-width: 577px) {
+                .main-form {
+                    left: 10%;
+                    width: 80%;
+                    top: 53vw;
+                }
+                .footer-customize {
+                    margin-top: 0.5rem;
+                }
+                .content-top-title {
+                    padding-left: 2%;
+                }
+                .content-top-content {
+                    padding-left: 2%;
+                }
+                .mainmargin{
+                  margin-bottom: 3%;
+                }
+            }
+            @media screen and (min-width: 578px) and (max-width: 768px) {
+                .main-form {
+                    left: 15%;
+                    width: 70%;
+                    top: 48vw;
+                }
+                .footer-customize {
+                    margin-top: 0.5rem;
+                }
+                .content-top-title {
+                    padding-left: 4%;
+                }
+                .content-top-content {
+                    padding-left: 4%;
+                }
+                .mainmargin{
+                  margin-bottom: 4%;
+                }
+            }
+            @media screen and (min-width: 769px) and (max-width: 992px) {
+                .main-form {
+                    left: 17%;
+                    width: 66%;
+                    top: 45vw;
+                }
+                .content-top-title {
+                    padding-left: 6%;
+                }
+                .content-top-content {
+                    padding-left: 6%;
+                }
+                .mainmargin{
+                  margin-bottom: 2%;
+                }
+            }
+            @media screen and (min-width: 993px) and (max-width: 1090px) {
+                .main-form {
+                    top: 43vw;
+                }
+                .content-top-title {
+                    padding-left: 8%;
+                }
+                .content-top-content {
+                    padding-left: 8%;
+                }
+                .mainmargin{
+                  margin-bottom: 10%;
+                }
+            }
+        </style>
+    </head>
 
-<body class="body">
-  <nav class="navbar navbar-expand-md navbar-light fixed-top">
-    <a class="company-icon" href="./Home.html">
-      <img src="./files/trade-mark.svg" height="48.4px">
-    </a>
+    <body class="body">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <a class="company-icon" href="./Home.html">
+                <img src="./files/trade-mark.svg" height="48.4px" />
+            </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Vulnerability.html">VULNERABILITY</a>
-      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Solutions.html">SOLUTIONS</a>
-      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Articles.html">ARTICLES</a>
-      <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./About-landing.html">ABOUT</a>
-      <div class="report-button-border">
-        <button type="button" class="btn btn-danger me-2 py-2 report-button d-md-block"
-          onclick="location.href = './Report.html'">
-          Report
-        </button>
-      </div>
-    </div>
-  </nav>
-	
-	<main class="content" style="margin-bottom: 50vh;">
-    <div id="myModal" class="modal">
-      <div class="modal-content" style="font-size: medium;">
-        <h6 class="modal-title">Site Report Disclaimer</h6>
-        <p>Any information submitted through this form will be kept confidential and reports will remain anonymous. We will not share your personal details with any third parties as part of a report. However, we may need to contact you for additional details to properly investigate your report. </p>
-        <center class="close">Okay</center>
-      </div>
-    </div>
-    <div class="row-background">
-      <div class="text-white content-top-title">
-        <p>Defend Infrastructure.</p>
-        <p>Defend Freedom.</p>
-      </div>
-      <div class="text-white content-top-content">
-        <p>Safeguarding critical systems is key to our nation’s resilience.</p>
-        <p>Report all exposure attempts through the form below. It is the</p>
-        <p>mandatory duty of owners to disclose attacks to help secure</p>
-        <p>our nation's critical infrastructure.</p>
-      </div>
-    </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Vulnerability.html">VULNERABILITY</a>
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Solutions.html">SOLUTIONS</a>
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Articles.html">ARTICLES</a>
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./About-landing.html">ABOUT</a>
+                <div class="report-button-border">
+                    <button type="button" class="btn btn-danger me-2 py-2 report-button d-md-block" onclick="location.href = './Report.html'">
+                        Report
+                    </button>
+                </div>
+            </div>
+        </nav>
 
-    <div class="main-form shadow-lg p-3 mb-5 bg-body rounded">
-      <form name="reportForm" action="./Report-completed.html" style="margin: 50px;" onsubmit="return validateForm()">
-        <h3>Site Report form</h3>
-        <h5>Contact Information</h5>
-        <p id="errorMessage" class="hide-error">Please fill all information</p>
-        <div class="mb-3">
-          <input type="text" name="title" class="form-control" id="title" placeholder="Title">
-        </div>
-        <div class="mb-3">
-          <input type="text" name="fullName" class="form-control" id="inputFullName" placeholder="Full Name">
-        </div> 
-        <div class="mb-3">
-          <input type="text" name="contactNumber" class="form-control" id="inputContactNumber" placeholder="Contact Number">
-        </div> 
-        <div class="mb-3">
-          <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email Address">
-        </div>
-        <div class="mb-3">
-          <input type="text" name="role" class="form-control" id="inputRole" placeholder="Company Role">
-        </div> 
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="agreeCheckBox">
-          <label class="form-check-label" for="boxCheck">
-            I have read and agree our <u id="myBtn" style="cursor: pointer;">disclaimer</u>
-          </label>
-        </div>
-        <center><button id="submitButton" type="submit" class="btn btn-danger disabled">Submit Report</button></center>
-      </form>
-    </div>
-    
-	</main>
-
-  <footer id="footer" style="display: block; width: 100%" class="footer-bs bg-dark text-white">
-    <div class="container app-padding max-width" style="padding-top: 10px; padding-bottom: 10px;">
-      <div class="row">
-        <div class="col-12 col-sm-7">
-          <div class="row">
-            <div class="col-sm-6 col-md-5" style="padding-left: 20px;">
-              <div style="display: flex;">
-                <p style="font-size: 24; font-weight: 500; line-height: 28px;">ARUME</p>
-                <b style="font-size: 24; font-weight: 500; line-height: 28px; color: #FF000C;">.</b>
+        <main class="content mainmargin" >
+            
+            <div id="myModal" class="modal">
+              <div class="modal-content" style="border-radius: 12px; padding: 24px; box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);">
+                  <div>
+                      <h6 class="modal-title">Site Report Disclaimer</h6>
+                      <p> Any information submitted through this form will be kept confidential and reports will remain anonymous. 
+                        <br/>We will not share your personal details with any third parties as part of a report. However, we may need to contact you for additional details to properly investigate your report. </p>
+                  </div>
+                  <center class="close" style="font-weight: 600; font-size: 16px; line-height: 24px; border-radius: 8px; padding: 10px 18px; color: #344054;">
+                      Okay
+                  </center>
               </div>
-              <p style="font-weight: 600; font-size: 16px; line-height: 24px; margin: 1.5rem 0px 0px 0.5rem;">Contact us
-              </p>
-              <p style="margin: 0.5rem 0px 0px 0.5rem;">
-                <a href="mailto:support@arume.org">support@arume.org</a>
-              </p>
-            </div>
-            <div class="col-sm-6 col-md-7" style="padding-left: 20px;">
-              <br>
-              <br>
-              <p style="margin-top: 2.5rem;">
-                <a class="text-decoration-none" style="color: #FF000C;" href="./Report.html">Report Attack</a>
-              </p>
-              <p style="margin-top: 0.5rem;">
-                <a class="text-decoration-none text-white" href="./Vulnerability.html">Station Vulnerability</a>
-              </p>
-              <p style="margin-top: 0.5rem;">Centro comercial Moctezuma</p>
-              <p style="margin-top: 0.5rem;">
-                <a class="text-decoration-none text-white" href="./Articles.html">Articles</a>
-              </p>
-              <p style="margin-top: 0.5rem;">Disclaimer</p>
-              <p style="margin-top: 0.5rem;">
-                <a class="text-decoration-none text-white" href="./Term.html">T&amp;Cs</a>
-              </p>
-              <br>
-            </div>
           </div>
-        </div>
-        <div class="col-12 col-sm-5" style="display: flex;align-self: flex-end; padding-left: 20px;justify-content: end;">
-          <p>ARUME © 2024. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
+            <div class="row-background">
+                <div class="text-white content-top-title">
+                    <p>Defend Infrastructure.</p>
+                    <p>Defend Freedom.</p>
+                </div>
+                <div class="text-white content-top-content">
+                    <p>Safeguarding critical systems is key to our nation’s resilience.</p>
+                    <p>Report all exposure attempts through the form below. It is the</p>
+                    <p>mandatory duty of owners to disclose attacks to help secure</p>
+                    <p>our nation's critical infrastructure.</p>
+                </div>
+            </div>
+            <div class="main-form col-12 col-sm-10 col-md-6 content-list rounded shadow-lg" style="background-color: white; padding: 2% 2%;">
+                <form name="reportForm" action="./Report-completed.html" style="margin: 3rem 5rem 3rem 5rem;" onsubmit="return validateForm()">
+                    <h3 style="margin: 2rem 0rem 2rem 0rem;">Site Report form</h3>
+                    <h5 style="margin: 1rem 0rem 1rem 0rem;">Contact Information</h5>
+                    <p id="errorMessage" class="hide-error">Please fill all information</p>
+                    <div class="mb-3">
+                        <input type="text" name="title" class="form-control" id="title" placeholder="Title - Mr/Mrs/Ms" />
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="fullName" class="form-control" id="inputFullName" placeholder="Full Name - John Smith" />
+                    </div>
+                    <div class="mb-3">
+                        <input type="text"  name="contactNumber" class="form-control" id="inputContactNumber" placeholder="Contact Number - 1234567890"  onkeypress='validateNumber(event)'  />
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email Address - email@email.com" />
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="role" class="form-control" id="inputRole" placeholder="Company Role - Security Manager" />
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="agreeCheckBox" />
+                        <label class="form-check-label" for="boxCheck"> I have read and agree our <u id="myBtn" style="cursor: pointer;">disclaimer</u> </label>
+                    </div>
+                    <center style="margin: 3rem 0rem 0rem 0rem;"><button id="submitButton" type="submit" class="btn btn-danger me-2 py-2 report-button d-md-block disabled"  >Submit Report</button></center>
+                </form>
+            </div>
+        </main>
+
+        <footer id="footer" style="display: block; width: 100%;" class="footer-bs bg-dark text-white">
+            <div class="container app-padding max-width" style="padding-top: 2rem; padding-bottom: 10px;">
+                <div class="row">
+                    <div class="col-12 col-sm-7">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-5">
+                                <div style="display: flex;">
+                                    <p style="font-size: 1.5rem; font-weight: 500; line-height: 28px;">ARUME</p>
+                                    <b style="font-size: 1.5rem; font-weight: 500; line-height: 28px; color: #ff000c;">.</b>
+                                </div>
+                                <p style="font-weight: 600; font-size: 1rem; line-height: 24px; margin: 1.5rem 0px 0px 0.5rem;">Contact us</p>
+                                <p style="margin: 0.5rem 0px 0px 0.5rem;">
+                                    <a href="mailto:support@arume.org">support@arume.org</a>
+                                </p>
+                            </div>
+                            <div class="col-sm-6 col-md-7" style="padding-left: 20px;">
+                                <p class="footer-customize">
+                                    <a class="text-decoration-none" style="color: #ff000c;" href="./Report.html">Report Attack</a>
+                                </p>
+                                <p style="margin-top: 0.5rem;">
+                                    <a class="text-decoration-none text-white" href="./Vulnerability.html">Station Vulnerability</a>
+                                </p>
+                                <p style="margin-top: 0.5rem;">Centro comercial Moctezuma</p>
+                                <p style="margin-top: 0.5rem;">
+                                    <a class="text-decoration-none text-white" href="./Articles.html">Articles</a>
+                                </p>
+                                <p style="margin-top: 0.5rem;">
+                                    <a class="text-decoration-none text-white" href="./Disclaimer.html">Disclaimer</a>
+                                </p>
+                                <p style="margin-top: 0.5rem;">
+                                    <a class="text-decoration-none text-white" href="./Term.html">T&amp;Cs</a>
+                                </p>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-5" style="display: flex; align-self: flex-end; padding-left: 20px; justify-content: end;">
+                        <p>ARUME © 2024. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
 <script src="./script/modal.js"></script>
 <script type="text/javascript">
-  document.getElementById("agreeCheckBox").addEventListener("click", () => {
-    if (document.getElementById("agreeCheckBox").checked) {
-      document.getElementById("submitButton").classList.remove("disabled")
-    }
-    else {
-      document.getElementById("submitButton").classList.add("disabled")
-    }
-  });
+    document.getElementById("agreeCheckBox").addEventListener("click", () => {
+        if (document.getElementById("agreeCheckBox").checked) {
+            document.getElementById("submitButton").classList.remove("disabled");
+        } else {
+            document.getElementById("submitButton").classList.add("disabled");
+        }
+    });
 
-  function validateForm() {
-    const title = document.forms["reportForm"]["title"].value;
-    const fullName = document.forms["reportForm"]["fullName"].value;
-    const contactNumber = document.forms["reportForm"]["contactNumber"].value;
-    const email = document.forms["reportForm"]["email"].value;
-    const role = document.forms["reportForm"]["role"].value;
+    function validateForm() {
+        const title = document.forms["reportForm"]["title"].value;
+        const fullName = document.forms["reportForm"]["fullName"].value;
+        const contactNumber = document.forms["reportForm"]["contactNumber"].value;
+        const email = document.forms["reportForm"]["email"].value;
+        const role = document.forms["reportForm"]["role"].value;
 
-    if (!title || !fullName || !contactNumber || !email || !role) {
-      const errorMessage = document.getElementById("errorMessage");
-      errorMessage.classList.remove("hide-error");
-      errorMessage.classList.add("display-error");
-      return false;
+        if (!title || !fullName || !contactNumber || !email || !role) {
+            const errorMessage = document.getElementById("errorMessage");
+            errorMessage.classList.remove("hide-error");
+            errorMessage.classList.add("display-error");
+            return false;
+        }
+        return true;
     }
-    return true;
-  }
 
-  document.getElementById("myBtn").addEventListener("click", () => openPopup("myModal"));
+    function validateNumber(evt) {
+      var theEvent = evt || window.event;
+
+      // Handle paste
+      if (theEvent.type === 'paste') {
+          key = event.clipboardData.getData('text/plain');
+      } else {
+      // Handle key press
+          var key = theEvent.keyCode || theEvent.which;
+          key = String.fromCharCode(key);
+      }
+      var regex = /[0-9]|\./;
+      if( !regex.test(key) ) {
+        theEvent.returnValue = false;
+        if(theEvent.preventDefault) theEvent.preventDefault();
+      }
+    }
+
+    document.getElementById("myBtn").addEventListener("click", () => openPopup("myModal"));
 </script>
