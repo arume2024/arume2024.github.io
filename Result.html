@@ -21,9 +21,10 @@
   <link href="./css/search-validation.css" rel="stylesheet">
   <link href="./css/header.css" rel="stylesheet">
   <link href="./css/ultil.css" rel="stylesheet">
+  <link href="./css/search.css" rel="stylesheet" />
   <script src="./script/jquery-3.7.1.min"></script>
   <script src="./script/bootstrap.js"></script>
-  
+
   <meta name="theme-color" content="#7952b3">
   <!-- Custom styles for this template -->
   <!-- <link href="./files/customscss.css" rel="stylesheet"> -->
@@ -48,6 +49,7 @@
       text-align: center;
       padding: 10px 0;
     }
+
     .footer-customize {
       margin-top: 5.25rem;
     }
@@ -69,8 +71,8 @@
 
     th {
       background-color: black;
-       color: white;
-       padding: 5px;
+      color: white;
+      padding: 5px;
     }
 
     tr {
@@ -140,11 +142,6 @@
       color: #181818;
     }
 
-    .search-block {
-      padding-left: 6vw;
-      padding-right: 6vw;
-    }
-
     .input-without-border {
       border: none !important;
       outline: none !important;
@@ -180,39 +177,8 @@
     }
 
     @media screen and (max-width: 576px) {
-      .search-block {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-
-      .search-block-input {
-        width: 100%;
-      }
-      
       .footer-customize {
         margin-top: 0.5rem;
-      }
-    }
-
-    @media screen and (min-width: 577px) and (max-width: 768px) {
-      .search-block {
-        padding-left: 5vw;
-        padding-right: 5vw;
-      }
-
-      .search-block-input {
-        width: 100%;
-      }
-    }
-
-    @media screen and (min-width: 769px) and (max-width: 1599px) {
-      .search-block {
-        padding-left: 8vw;
-        padding-right: 8vw;
-      }
-
-      .search-block-input {
-        width: 100%;
       }
     }
   </style>
@@ -221,7 +187,7 @@
 <body class="body">
   <nav class="navbar navbar-expand-md navbar-light fixed-top">
     <a class="company-icon" href="./Home.html">
-      <img src="./files/trade-mark.svg" height="48.4px">
+      <img src="./files/trade-mark.svg" height="48.4px" />
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -266,247 +232,255 @@
           Okay</center>
       </div>
     </div>
-    <div style="width:100%">
-      <div class="mb-4">
-        <div class="bg-dark pt-4 pb-4" style="width:100%; height:25%">
-          <div class="pt-4 hidden"></div>
-          <div class="search-block container">
-            <div class="text-white container max-width search-text">Search:</div>
-            <div class="container max-width" style="padding: 0px;display: flex;">
-              <div class="container search-input max-width" style="flex: 1;">
-                <div class="row">
-                  <div class="col-8" style="padding: 0px 14px 0px 0px;">
-                    
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        style="border: none;padding: 10px 0px 10px 22px;border-radius: 8px 0px 0px 8px;"><img
-                          src="./files/ic-search.svg" style="width: 20px;height: 20px;"></span>
-                      <input id="domain" type="text" class="form-control input-without-border"
-                        style="font-size: 14px;font-weight: 400;line-height: 28px;padding: 10px 14px 10px 8px;border-radius: 0px 8px 8px 0px;"
-                        placeholder="Search by any words in the site name, address or by IP address">
-                    </div>
-                  </div>
 
-                  <div class="col-4" style="padding: 0px;">
-                    <div class="input-group">
-                      <span class="input-group-text"
-                        style="border: none;padding-right: 0px;border-radius: 8px 0px 0px 8px;">
-                        <img src="./files/ic-search.svg" style="width: 20px;height: 20px;margin-right: 4px;">
-                      </span>
-                      <input id="port" type="text" class="form-control input-without-border"
-                        style="font-size: 14px; font-weight: 400; line-height: 28px; padding: 10px 14px 10px 4px; border-radius: 0px 8px 8px 0px;"
-                        placeholder="Port # 10001">
-                    </div>
-                  </div>
+    <div class="mb-5" style="margin-top: 34px;">
+      <div class="bg-dark" style="width: 100%; height: 25%;">
+        <div class="pt-3 pb-4 search-block">
+          <div class="text-white app-padding max-width search-text">Search:</div>
+          <div class="app-padding max-width" style="display: flex;">
+            <div class="container search-input max-width" style="flex: 1;">
+              <div class="row">
+                <div class="col-8" style="padding: 0px 14px 0px 0px;">
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      style="border: none; padding: 10px 0px 10px 22px; border-radius: 8px 0px 0px 8px;"><img
+                        src="./files/ic-search.svg" style="width: 20px; height: 20px;" /></span>
 
+                    <input id="domain" type="text" class="form-control input-without-border"
+                      style="font-size: 14px; font-weight: 400; line-height: 28px; padding: 10px 14px 10px 8px; border-radius: 0px 8px 8px 0px;"
+                      placeholder="Search by any words in the site name, address or by IP address" />
+                  </div>
+                </div>
+
+                <div class="col-4" style="padding: 0px;">
+                  <div class="input-group" style="display: flex;">
+                    <span class="input-group-text"
+                      style="border: none; padding-right: 0px; border-radius: 8px 0px 0px 8px;">
+                      <img src="./files/ic-search.svg" style="width: 20px; height: 20px; margin-right: 4px;" />
+                      <p style="font-size: 14px; font-weight: 400; line-height: 28px; color: #667085; margin: 0px;">
+                        Port #</p>
+                    </span>
+
+                    <input id="port" type="text" class="form-control input-without-border"
+                      style="font-size: 14px; font-weight: 700; line-height: 28px; padding: 10px 14px 10px 4px; border-radius: 0px 8px 8px 0px;"
+                      placeholder="10001" />
+                  </div>
                 </div>
               </div>
+            </div>
+            <button onclick="gotoSearchResult()" class="btn btn-danger search-btn-big report-button"
+              style="margin: 0px 0px 0px 14px;">Search</button>
+          </div>
 
-              <button id="internetSearchButton" class="btn btn-danger search-btn-big report-button"
-                style="margin: 0px 0px 0px 14px;">Search</button>
+          <div class="app-padding mb-0 pt-3 text-white max-width"
+            style="display: flex; align-items: center; padding: 0px;">
+            <div style="flex: 1;">
+              <span id="howFindButton" class="open-popup-button custom-under-line"
+                style="font-size: 15px; font-weight: 600; line-height: 28px;">How do I find my site</span>
+              <img src="./files/ic-circle-question-mark.svg" style="width: 14px; height: 14px;" />
             </div>
 
-            <div class="container mb-0 pt-3 text-white max-width"
-              style="display: flex;align-items: center;padding: 0px;">
-              <div style="flex: 1;">
-                <span id="howFindButton" class="open-popup-button custom-under-line"
-                  style="font-size: 15px;font-weight: 600;line-height: 28px; text-decoration: underline;">How do I find my site
-                  <img src="./files/ic-circle-question-mark.svg" style="width: 14px;height: 14px;">
-                </span>
-              </div>
+            <button onclick="gotoSearchResult()" class="btn btn-danger search-btn-small report-button"
+              style="padding: 10px 14px; display: none;">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-              <button id="internetSearchButton" class="btn btn-danger search-btn-small report-button"
-                style="padding: 10px 14px;display: none;">Search</button>
+    <div class="search-result mb-4">
+      <b id="totalResult" style="color: #FF000C;"></b>
+      <b>vulnerable results for </b>
+      <b id="searchKey" style="color: #FF000C;"></b>
+      <h1 id="ipAddress" style="color: red;"></h1>
+      <h1 id="portSearch" style="color: red;"></h1>
+    </div>
+    <div id="has-result">
+      <div>
+        <div class="p-3 bg-light text-dark" style="width:100%">
+          <center>Vulnerable tank gauges discoverable via Shodan.io search engine. Last updated: 17:22 12.12.2023 (?)
+          </center>
+        </div>
+      </div>
+      <table id="mainTable">
+        <tr>
+          <th style="width: 40%;">STATION INFORMATION</th>
+          <th style="width: 20%;" class="center">TANK VOLUME</th>
+          <th style="width: 20%;" class="center">VULNERABILITY SCORE</th>
+          <th style="width: 20%;"></th>
+        </tr>
+        <tr>
+          <td style="display: none;">red</td>
+          <td>
+            <div>
+              <div class="bold">Whitinsville Gulf</div>
+              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
+              <div>Unbranded (toll-free)</div>
             </div>
-          </div>
-        </div>
+          </td>
+          <td class="center">
+            <p>TANK #1</p>
+            <p>DIESEL</p>
+            <p>7,000 GAL</p>
+            <p>11:24AM</p>
+            <p>12.12.2023</p>
+          </td>
+          <td class="center"><span class="dot">!</span></td>
+          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=1'">Inspect</button>
+          </td>
+        </tr>
+        <tr>
+          <td style="display: none;">amber</td>
+          <td>
+            <div>
+              <div class="bold">Whitinsville Gulf</div>
+              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
+              <div>Unbranded (toll-free)</div>
+            </div>
+          </td>
+          <td class="center">
+            <p>TANK #1</p>
+            <p>DIESEL</p>
+            <p>7,000 GAL</p>
+            <p>11:24AM</p>
+            <p>12.12.2023</p>
+          </td>
+          <td class="center"><span class="dot">!</span></td>
+          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=2'">Inspect</button>
+          </td>
+        </tr>
+        <tr>
+          <td style="display: none;">red</td>
+          <td>
+            <div>
+              <div class="bold">Whitinsville Gulf</div>
+              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
+              <div>Unbranded (toll-free)</div>
+            </div>
+          </td>
+          <td class="center">
+            <p>TANK #1</p>
+            <p>DIESEL</p>
+            <p>7,000 GAL</p>
+            <p>11:24AM</p>
+            <p>12.12.2023</p>
+          </td>
+          <td class="center"><span class="dot">!</span></td>
+          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=3'">Inspect</button>
+          </td>
+        </tr>
+        <tr>
+          <td style="display: none;">yellow</td>
+          <td>
+            <div>
+              <div class="bold">Whitinsville Gulf</div>
+              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
+              <div>Unbranded (toll-free)</div>
+            </div>
+          </td>
+          <td class="center">
+            <p>TANK #1</p>
+            <p>DIESEL</p>
+            <p>7,000 GAL</p>
+            <p>11:24AM</p>
+            <p>12.12.2023</p>
+          </td>
+          <td class="center"><span class="dot">!</span></td>
+          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=4'">Inspect</button>
+          </td>
+        </tr>
+        <tr>
+          <td style="display: none;">red</td>
+          <td>
+            <div>
+              <div class="bold">Whitinsville Gulf</div>
+              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
+              <div>Unbranded (toll-free)</div>
+            </div>
+          </td>
+          <td class="center">
+            <p>TANK #1</p>
+            <p>DIESEL</p>
+            <p>7,000 GAL</p>
+            <p>11:24AM</p>
+            <p>12.12.2023</p>
+          </td>
+          <td class="center"><span class="dot">!</span></td>
+          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=5'">Inspect</button>
+          </td>
+        </tr>
+        <tr>
+          <td style="display: none;">red</td>
+          <td>
+            <div>
+              <div class="bold">Whitinsville Gulf</div>
+              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
+              <div>Unbranded (toll-free)</div>
+            </div>
+          </td>
+          <td class="center">
+            <p>TANK #1</p>
+            <p>DIESEL</p>
+            <p>7,000 GAL</p>
+            <p>11:24AM</p>
+            <p>12.12.2023</p>
+          </td>
+          <td class="center"><span class="dot">!</span></td>
+          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=6'">Inspect</button>
+          </td>
+        </tr>
+        <tr>
+          <td style="display: none;">red</td>
+          <td>
+            <div>
+              <div class="bold">Whitinsville Gulf</div>
+              <div>119 MAIN ST SUDLERSVILLE MD 21888 Massachusetts</div>
+              <div>Unbranded (toll-free)</div>
+            </div>
+          </td>
+          <td class="center">
+            <p>TANK #1</p>
+            <p>DIESEL</p>
+            <p>7,000 GAL</p>
+            <p>11:24AM</p>
+            <p>12.12.2023</p>
+          </td>
+          <td class="center"><span class="dot">!</span></td>
+          <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=7'">Inspect</button>
+          </td>
+        </tr>
+      </table>
+      <div id="pagination" class="pagination">
+        <a href="./Result.html?search=Kwik&page=1">&lt;</a>
+        <a href="./Result.html?search=Kwik&page=1">1</a>
+        <a class="active">2</a>
+        <a href="./Result.html?search=Kwik&page=3">3</a>
+        <a href="./Result.html?search=Kwik&page=4">4</a>
+        <a href="./Result.html?search=Kwik&page=5">5</a>
+        <a href="./Result.html?search=Kwik&page=6">6</a>
+        <a href="./Result.html?search=Kwik&page=3">&gt;</a>
       </div>
-      <div class="search-result mb-4">
-        <b id="totalResult" style="color: #FF000C;"></b>
-        <b>vulnerable results for </b>
-        <b id="searchKey" style="color: #FF000C;"></b>
-        <h1 id="ipAddress" style="color: red;"></h1>
-        <h1 id="portSearch" style="color: red;"></h1>
-      </div>
-      <div id="has-result">
-        <div>
-          <div class="p-3 bg-light text-dark" style="width:100%">
-            <center>Vulnerable tank gauges discoverable via Shodan.io search engine. Last updated: 17:22 12.12.2023 (?)
-            </center>
-          </div>
+    </div>
+    <div id="no-result" class="no-result container" style="max-width: 100%;margin: 96px 0px;">
+      <div class="row">
+        <div class="col-1"></div>
+        <div class="col-9">
+          <p style="font-weight: 600;">We did not find any sites matching your current search
+            criteria.</p>
+          <p style="font-weight: 600; color: #FF000C; margin-bottom: 40px;">This does not necessarily mean your site
+            is secure.
+          </p>
+          <p>A few things could cause no results:</p>
+          <ul>
+            <li>You may need to try different search terms or parameters to find results.</li>
+            <li>The current scanner is limited and some sites could still be vulnerable despite not appearing in our
+              results.</li>
+            <li>Your sites may be password protected. In the future, we aim to allow checking if your specific sites
+              are
+              properly password protected.</li>
+          </ul>
+          <p style="margin-top: 40px;">Check back often as more vulnerable sites are found each day.</p>
         </div>
-        <table id="mainTable">
-          <tr>
-            <th style="width: 40%;">STATION INFORMATION</th>
-            <th style="width: 20%;"class="center">TANK VOLUME</th>
-            <th style="width: 20%;"class="center">VULNERABILITY SCORE</th>
-            <th style="width: 20%;"></th>
-          </tr>
-          <tr>
-            <td style="display: none;">red</td>
-            <td>
-              <div>
-                <div class="bold">Whitinsville Gulf</div>
-                <div>119 MAIN ST SUDLERSVILLE MD   21888   Massachusetts</div>
-                <div>Unbranded (toll-free)</div>
-              </div>
-            </td>
-            <td class="center">
-              <p>TANK #1</p>
-              <p>DIESEL</p>
-              <p>7,000 GAL</p>
-              <p>11:24AM</p>
-              <p>12.12.2023</p>
-            </td>
-            <td class="center"><span class="dot">!</span></td>
-            <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=1'">Inspect</button></td>
-          </tr>
-          <tr>
-            <td style="display: none;">amber</td>
-            <td>
-              <div>
-                <div class="bold">Whitinsville Gulf</div>
-                <div>119 MAIN ST SUDLERSVILLE MD   21888   Massachusetts</div>
-                <div>Unbranded (toll-free)</div>
-              </div>
-            </td>
-            <td class="center">
-              <p>TANK #1</p>
-              <p>DIESEL</p>
-              <p>7,000 GAL</p>
-              <p>11:24AM</p>
-              <p>12.12.2023</p>
-            </td>
-            <td class="center"><span class="dot">!</span></td>
-            <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=2'">Inspect</button></td>
-          </tr>
-          <tr>
-            <td style="display: none;">red</td>
-            <td>
-              <div>
-                <div class="bold">Whitinsville Gulf</div>
-                <div>119 MAIN ST SUDLERSVILLE MD   21888   Massachusetts</div>
-                <div>Unbranded (toll-free)</div>
-              </div>
-            </td>
-            <td class="center">
-              <p>TANK #1</p>
-              <p>DIESEL</p>
-              <p>7,000 GAL</p>
-              <p>11:24AM</p>
-              <p>12.12.2023</p>
-            </td>
-            <td class="center"><span class="dot">!</span></td>
-            <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=3'">Inspect</button></td>
-          </tr>
-          <tr>
-            <td style="display: none;">yellow</td>
-            <td>
-              <div>
-                <div class="bold">Whitinsville Gulf</div>
-                <div>119 MAIN ST SUDLERSVILLE MD   21888   Massachusetts</div>
-                <div>Unbranded (toll-free)</div>
-              </div>
-            </td>
-            <td class="center">
-              <p>TANK #1</p>
-              <p>DIESEL</p>
-              <p>7,000 GAL</p>
-              <p>11:24AM</p>
-              <p>12.12.2023</p>
-            </td>
-            <td class="center"><span class="dot">!</span></td>
-            <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=4'">Inspect</button></td>
-          </tr>
-          <tr>
-            <td style="display: none;">red</td>
-            <td>
-              <div>
-                <div class="bold">Whitinsville Gulf</div>
-                <div>119 MAIN ST SUDLERSVILLE MD   21888   Massachusetts</div>
-                <div>Unbranded (toll-free)</div>
-              </div>
-            </td>
-            <td class="center">
-              <p>TANK #1</p>
-              <p>DIESEL</p>
-              <p>7,000 GAL</p>
-              <p>11:24AM</p>
-              <p>12.12.2023</p>
-            </td>
-            <td class="center"><span class="dot">!</span></td>
-            <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=5'">Inspect</button></td>
-          </tr>
-          <tr>
-            <td style="display: none;">red</td>
-            <td>
-              <div>
-                <div class="bold">Whitinsville Gulf</div>
-                <div>119 MAIN ST SUDLERSVILLE MD   21888   Massachusetts</div>
-                <div>Unbranded (toll-free)</div>
-              </div>
-            </td>
-            <td class="center">
-              <p>TANK #1</p>
-              <p>DIESEL</p>
-              <p>7,000 GAL</p>
-              <p>11:24AM</p>
-              <p>12.12.2023</p>
-            </td>
-            <td class="center"><span class="dot">!</span></td>
-            <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=6'">Inspect</button></td>
-          </tr>
-          <tr>
-            <td style="display: none;">red</td>
-            <td>
-              <div>
-                <div class="bold">Whitinsville Gulf</div>
-                <div>119 MAIN ST SUDLERSVILLE MD   21888   Massachusetts</div>
-                <div>Unbranded (toll-free)</div>
-              </div>
-            </td>
-            <td class="center">
-              <p>TANK #1</p>
-              <p>DIESEL</p>
-              <p>7,000 GAL</p>
-              <p>11:24AM</p>
-              <p>12.12.2023</p>
-            </td>
-            <td class="center"><span class="dot">!</span></td>
-            <td><button class="inspect-button" onclick="location.href = './ResultDetail.html?id=7'">Inspect</button></td>
-          </tr>
-        </table>
-        <div id="pagination" class="pagination">
-          <a href="./Result.html?search=Kwik&page=1">&lt;</a>
-          <a href="./Result.html?search=Kwik&page=1">1</a>
-          <a class="active">2</a>
-          <a href="./Result.html?search=Kwik&page=3">3</a>
-          <a href="./Result.html?search=Kwik&page=4">4</a>
-          <a href="./Result.html?search=Kwik&page=5">5</a>
-          <a href="./Result.html?search=Kwik&page=6">6</a>
-          <a href="./Result.html?search=Kwik&page=3">&gt;</a>
-        </div>
-      </div>
-      <div id="no-result" class="no-result container" style="max-width: 100%;margin: 96px 0px;">
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-9">
-            <p style="font-weight: 600;">We did not find any sites matching your current search
-              criteria.</p>
-            <p style="font-weight: 600; color: #FF000C; margin-bottom: 40px;">This does not necessarily mean your site is secure.
-            </p>
-            <p>A few things could cause no results:</p>
-            <ul>
-              <li>You may need to try different search terms or parameters to find results.</li>
-              <li>The current scanner is limited and some sites could still be vulnerable despite not appearing in our
-                results.</li>
-              <li>Your sites may be password protected. In the future, we aim to allow checking if your specific sites are
-                properly password protected.</li>
-            </ul>
-            <p style="margin-top: 40px;">Check back often as more vulnerable sites are found each day.</p>
-          </div>
-          <div class="col-2"></div>
-        </div>
+        <div class="col-2"></div>
       </div>
     </div>
   </main>
@@ -540,7 +514,7 @@
               </p>
               <p style="margin-top: 0.5rem;">
                 <a class="text-decoration-none text-white" href="./Disclaimer.html">Disclaimer</a>
-            </p>
+              </p>
               <p style="margin-top: 0.5rem;">
                 <a class="text-decoration-none text-white" href="./Term.html">T&amp;Cs</a>
               </p>
@@ -548,7 +522,8 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-5" style="display: flex;align-self: flex-end; padding-left: 20px;justify-content: end;">
+        <div class="col-12 col-sm-5"
+          style="display: flex;align-self: flex-end; padding-left: 20px;justify-content: end;">
           <p>ARUME © 2024. All rights reserved.</p>
         </div>
       </div>
@@ -595,12 +570,12 @@
   function updatSearchKey() {
     const searchKey = document.getElementById("searchKeyValue").textContent;
     if (searchKey) {
-      document.getElementById("searchKey").textContent = "`"+searchKey+"`";
+      document.getElementById("searchKey").textContent = "`" + searchKey + "`";
     } else {
       const ipAddress = document.getElementById("ipAddressValue").textContent;
       const port = document.getElementById("portValue").textContent;
       document.getElementById("ipAddress").textContent = ipAddress;
-      document.getElementById("portSearch").textContent = "#"+port;
+      document.getElementById("portSearch").textContent = "#" + port;
     }
   }
 

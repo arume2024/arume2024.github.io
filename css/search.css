@@ -1,0 +1,25 @@
+@media screen and (max-width: 768px) {
+  .db-search-btn-small {
+    display: block !important;
+  }
+
+  .search-btn-small {
+    display: block !important;
+  }
+
+  .db-search-btn-big {
+    display: none;
+  }
+
+  .search-btn-big {
+    display: none;
+  }
+
+  .db-search-input {
+    padding: 0px !important;
+  }
+
+  .search-input {
+    padding-right: 12px !important;
+  }
+}
