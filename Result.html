@@ -189,9 +189,54 @@
       cursor: pointer;
     }
 
-    @media screen and (max-width: 576px) {
+    .button-inspect {
+      width: 20%;
+    }
+
+    .button-inspect-content {
+      font-size: 16px;
+      font-weight: 500; 
+      color: #FF000C;
+      padding: 12px 32px;
+      border: 1px solid #FF000C;
+      border-radius: 8px;
+    }
+
+    .vulnerable-icon {
+      align-items: center; 
+      display: flex; 
+      padding-left: 48px;
+    }
+
+    @media screen and (max-width: 1023px) {
       .footer-customize {
         margin-top: 0.5rem;
+      }
+
+      .vulnerable-results-for {
+        font-size: x-large;
+        margin-left: 1vh;
+      }
+
+      .body-content {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+
+      .column-title {
+        padding: 12px 10px;
+      }
+
+      .column-title-row {
+        width: 130%;
+      }
+
+      .vulnerable-icon {
+        align-items: center; 
+      }
+
+      .button-inspect {
+        width: 50%;
       }
     }
   </style>
@@ -356,15 +401,15 @@
         <p class="result-gray-panel">
           Vulnerable tank gauges discoverable via Shodan.io search engine. Last updated: 13:24PM 12.12.2023</p>
         <div class="container column-title">
-          <div class="row">
+          <div class="row column-title-row">
             <p class="col-4 text-start">STATION INFORMATION</p>
             <p class="col-2">TANK VOLUME</p>
             <p class="col-4 text-center">VULNERABILITY SCORE <img id="scoreDescriptionButton" src="./files/ic-info-outline.svg"
-                style="width: 20px;height: 20px;margin-right: 24px;"
+                style="width: 20px;height: 20px; margin-right: 24px;"
                 onclick="openPopup('scoreDescriptionModal')"></img></p>
           </div>
         </div>
-        <div class="container column-content" style="max-width: 100%;margin: 0px;">
+        <div class="container column-content" style="max-width: 100%; margin: 0px;">
           
           <div id="item-1" class="item">
             <div class="row" style="margin-bottom: 8px; margin-top: 24px;">
@@ -382,13 +427,11 @@
                 <p>11:24AM</p>
                 <p>12.12.2023</p>
               </div>
-              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
-                <img class="img-fluid" src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
+              <div class="col-2 vulnerable-icon">
+                <img src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
               </div>
-              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=1'">
-                <p
-                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
-                  Inspect Site</p>
+              <div class="col-3 button button-inspect" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=1'">
+                <p class="button-inspect-content">Inspect Site</p>
               </div>
             </div>
             <div class="row">
@@ -414,13 +457,11 @@
                 <p>11:24AM</p>
                 <p>12.12.2023</p>
               </div>
-              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
-                <img class="img-fluid" src="./files/moderate.png" onclick="openPopup('scoreDescriptionModal')" />
+              <div class="col-2 vulnerable-icon">
+                <img src="./files/moderate.png" onclick="openPopup('scoreDescriptionModal')" />
               </div>
-              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=2'">
-                <p
-                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
-                  Inspect Site</p>
+              <div class="col-3 button button-inspect" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=2'">
+                <p class="button-inspect-content">Inspect Site</p>
               </div>
             </div>
             <div class="row">
@@ -446,13 +487,11 @@
                 <p>11:24AM</p>
                 <p>12.12.2023</p>
               </div>
-              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
-                <img class="img-fluid" src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
+              <div class="col-2 vulnerable-icon">
+                <img src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
               </div>
-              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=3'">
-                <p
-                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
-                  Inspect Site</p>
+              <div class="col-3 button button-inspect" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=3'">
+                <p class="button-inspect-content">Inspect Site</p>
               </div>
             </div>
             <div class="row">
@@ -478,13 +517,11 @@
                 <p>11:24AM</p>
                 <p>12.12.2023</p>
               </div>
-              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
-                <img class="img-fluid" src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
+              <div class="col-2 vulnerable-icon">
+                <img src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
               </div>
-              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=4'">
-                <p
-                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
-                  Inspect Site</p>
+              <div class="col-3 button button-inspect" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=4'">
+                <p class="button-inspect-content">Inspect Site</p>
               </div>
             </div>
             <div class="row">
@@ -510,13 +547,11 @@
                 <p>11:24AM</p>
                 <p>12.12.2023</p>
               </div>
-              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
-                <img class="img-fluid" src="./files/moderate.png" onclick="openPopup('scoreDescriptionModal')" />
+              <div class="col-2 vulnerable-icon">
+                <img src="./files/moderate.png" onclick="openPopup('scoreDescriptionModal')" />
               </div>
-              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=5'">
-                <p
-                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
-                  Inspect Site</p>
+              <div class="col-3 button button-inspect" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=5'">
+                <p class="button-inspect-content">Inspect Site</p>
               </div>
             </div>
             <div class="row">
@@ -542,13 +577,11 @@
                 <p>11:24AM</p>
                 <p>12.12.2023</p>
               </div>
-              <div class="col-2" style="align-items: center; display: flex; padding-left: 48px;">
-                <img class="img-fluid" src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
+              <div class="col-2 vulnerable-icon">
+                <img src="./files/serve.png" onclick="openPopup('scoreDescriptionModal')" />
               </div>
-              <div class="col-2 button" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=6'">
-                <p
-                  style="font-size: 16px;font-weight: 500;color: #FF000C;padding: 12px 32px;border: 1px solid #FF000C;border-radius: 8px;">
-                  Inspect Site</p>
+              <div class="col-3 button button-inspect" style="align-items: center;display: flex" onclick="location.href = './ResultDetail.html?id=6'">
+                <p class="button-inspect-content">Inspect Site</p>
               </div>
             </div>
             <div class="row">
