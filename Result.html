@@ -22,6 +22,7 @@
   <link href="./css/header.css" rel="stylesheet">
   <link href="./css/ultil.css" rel="stylesheet">
   <link href="./css/search.css" rel="stylesheet" />
+  <link href="./css/pagination.css" rel="stylesheet">
   <script src="./script/jquery-3.7.1.min"></script>
   <script src="./script/bootstrap.js"></script>
 
@@ -101,33 +102,6 @@
       border: 1px solid #FF000C;
       box-shadow: 0px 1px 2px 0px #1018280D;
       background-color: white;
-    }
-
-    .pagination {
-      display: inline-block;
-      display: inline-block;
-      padding-top: 20px;
-      padding-left: 5%;
-      padding-bottom: 50px;
-    }
-
-    .pagination a {
-      color: black;
-      float: left;
-      padding: 8px 16px;
-      text-decoration: none;
-    }
-
-    .pagination a.active {
-      background-color: black;
-      color: white;
-      border-radius: 5px;
-      cursor: default;
-    }
-
-    .pagination a:hover:not(.active) {
-      background-color: #ddd;
-      border-radius: 5px;
     }
 
     .no-result p {
@@ -422,7 +396,7 @@
           </td>
         </tr>
       </table>
-      <div id="pagination" class="pagination">
+      <div id="pagination" class="pagination app-padding">
         <a href="./Result.html?search=Kwik&page=1">&lt;</a>
         <a href="./Result.html?search=Kwik&page=1">1</a>
         <a class="active">2</a>

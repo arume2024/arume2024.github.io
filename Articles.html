@@ -18,6 +18,7 @@
   <link href="./files/bootstrap.min.css" rel="stylesheet">
   <link href="./css/header.css" rel="stylesheet">
   <link href="./css/ultil.css" rel="stylesheet">
+  <link href="./css/pagination.css" rel="stylesheet">
   <script src="./script/jquery-3.7.1.min"></script>
   <script src="./script/bootstrap.js"></script>
 
@@ -48,9 +49,11 @@
       text-align: center;
       padding: 10px 0;
     }
+
     .footer-customize {
       margin-top: 5.25rem;
     }
+
     @media screen and (max-width: 576px) {
       .footer-customize {
         margin-top: 0.5rem;
@@ -125,6 +128,7 @@
         <p class="lh-1 big-text-inside-image text-white app-padding">Articles</p>
       </div>
     </div>
+
     <div class="container"
       style="max-width: 100%;background-image: linear-gradient(to bottom, black 0px, black 18.2vw, white 18.2vw);padding: 0px;">
       <div>
@@ -218,6 +222,17 @@
         </center>
       </div>
     </div>
+
+    <div id="pagination" class="pagination">
+      <a href="./Articles.html?search=Kwik&page=1">&lt;</a>
+      <a href="./Articles.html?search=Kwik&page=1">1</a>
+      <a class="active">2</a>
+      <a href="./Articles.html?search=Kwik&page=3">3</a>
+      <a href="./Articles.html?search=Kwik&page=4">4</a>
+      <a href="./Articles.html?search=Kwik&page=5">5</a>
+      <a href="./Articles.html?search=Kwik&page=6">6</a>
+      <a href="./Articles.html?search=Kwik&page=3">&gt;</a>
+    </div>
   </main>
 
   <footer id="footer" style="display: block; width: 100%" class="footer-bs bg-dark text-white">
@@ -249,7 +264,7 @@
               </p>
               <p style="margin-top: 0.5rem;">
                 <a class="text-decoration-none text-white" href="./Disclaimer.html">Disclaimer</a>
-            </p>
+              </p>
               <p style="margin-top: 0.5rem;">
                 <a class="text-decoration-none text-white" href="./Term.html">T&amp;Cs</a>
               </p>
@@ -257,10 +272,56 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-sm-5" style="display: flex;align-self: flex-end; padding-left: 20px;justify-content: end;">
+        <div class="col-12 col-sm-5"
+          style="display: flex;align-self: flex-end; padding-left: 20px;justify-content: end;">
           <p>ARUME © 2024. All rights reserved.</p>
         </div>
       </div>
     </div>
   </footer>
 </body>
+
+<script>
+  buildPagination();
+
+  function buildPagination() {
+    const currentPage = Number(document.getElementById("currentPageValue").textContent);
+    const maxPage = Number(document.getElementById("maxPageValue").textContent);
+    if (currentPage && maxPage) {
+      const pagination = document.getElementById("pagination");
+      paginationHTML = '';
+      if (currentPage !== 1) {
+        paginationHTML += buildPaginationHtml("&lt", currentPage - 1);
+      }
+
+      for (var i = 1; i <= maxPage; i++) {
+        if (i === currentPage) {
+          paginationHTML += buildCurrentPaginationHtml(i);
+        } else {
+          paginationHTML += buildPaginationHtml(i, i);
+        }
+      }
+
+      if (currentPage !== maxPage) {
+        paginationHTML += buildPaginationHtml("&gt", currentPage + 1);
+      }
+
+      pagination.innerHTML = paginationHTML;
+    }
+  }
+
+  function buildCurrentPaginationHtml(text) {
+    return `<a class="active">${text}</a>`;
+  }
+
+  function buildPaginationHtml(text, page) {
+    const searchKey = document.getElementById("searchKeyValue").textContent;
+    if (searchKey) {
+      return `<a href="./Articles.html?search=${searchKey}&page=${page}">${text}</a>`;
+    } else {
+      const ipAddress = document.getElementById("ipAddressValue").textContent;
+      const port = document.getElementById("portValue").textContent;
+      return `<a href="./Articles.html?domain=${ipAddress}&port=${port}&page=${page}">${text}</a>`;
+    }
+  }
+</script>
