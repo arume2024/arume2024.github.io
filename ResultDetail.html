@@ -20,6 +20,7 @@
   <link href="./css/search-validation.css" rel="stylesheet">
   <link href="./css/header.css" rel="stylesheet">
   <link href="./css/ultil.css" rel="stylesheet">
+  <link href="./css/search.css" rel="stylesheet" />
   <script src="./script/jquery-3.7.1.min"></script>
   <script src="./script/bootstrap.js"></script>
   
@@ -155,45 +156,60 @@
           Okay</center>
       </div>
     </div>
-    <div style="width:100%">
-      <div class="row mb-4">
-        <div class="bg-dark" style="width:100%; height:25%">
-          <div class="container pt-3 pb-3">
-            <div class="row mb-0 text-white" style="padding-left: 13px;">Database search:</div>
-            <div class="row mb-3">
-              <div class="col-10">
-                <div class="input-group">
-                  <span class="input-group-text"><i class="bi bi-search"></i></span>
-                  <input id="dbSearchText" type="text" class="form-control"
-                    placeholder="Search by site name, address or oil company name e,g. shell">
+
+    <div class="mb-5" style="margin-top: 34px;">
+      <div class="bg-dark" style="width: 100%; height: 25%;">
+        <div class="pt-3 pb-4 search-block">
+          <div class="text-white app-padding max-width search-text">Search:</div>
+          <div class="app-padding max-width" style="display: flex;">
+            <div class="container search-input max-width" style="flex: 1;">
+              <div class="row">
+                <div class="col-8" style="padding: 0px 14px 0px 0px;">
+                  <div class="input-group">
+                    <span class="input-group-text"
+                      style="border: none; padding: 10px 0px 10px 22px; border-radius: 8px 0px 0px 8px;"><img
+                        src="./files/ic-search.svg" style="width: 20px; height: 20px;" /></span>
+
+                    <input id="domain" type="text" class="form-control input-without-border"
+                      style="font-size: 14px; font-weight: 400; line-height: 28px; padding: 10px 14px 10px 8px; border-radius: 0px 8px 8px 0px;"
+                      placeholder="Search by any words in the site name, address or by IP address" />
+                  </div>
+                </div>
+
+                <div class="col-4" style="padding: 0px;">
+                  <div class="input-group" style="display: flex;">
+                    <span class="input-group-text"
+                      style="border: none; padding-right: 0px; border-radius: 8px 0px 0px 8px;">
+                      <img src="./files/ic-search.svg" style="width: 20px; height: 20px; margin-right: 4px;" />
+                      <p style="font-size: 14px; font-weight: 400; line-height: 28px; color: #667085; margin: 0px;">
+                        Port #</p>
+                    </span>
+
+                    <input id="port" type="text" class="form-control input-without-border"
+                      style="font-size: 14px; font-weight: 700; line-height: 28px; padding: 10px 14px 10px 4px; border-radius: 0px 8px 8px 0px;"
+                      placeholder="10001" />
+                  </div>
                 </div>
               </div>
-              <div class="col-2">
-                <button id="dbSearchButton" class="btn btn-danger w-100">Search</button>
-              </div>
+            </div>
+            <button onclick="gotoSearchResult()" class="btn btn-danger search-btn-big report-button"
+              style="margin: 0px 0px 0px 14px;">Search</button>
+          </div>
+
+          <div class="app-padding mb-0 pt-3 text-white max-width"
+            style="display: flex; align-items: center; padding: 0px;">
+            <div style="flex: 1;">
+              <span id="howFindButton" class="open-popup-button custom-under-line"
+                style="font-size: 15px; font-weight: 600; line-height: 28px;">How do I find my site</span>
+              <img src="./files/ic-circle-question-mark.svg" style="width: 14px; height: 14px;" />
             </div>
 
-            <div class="row mb-0 text-white" style="padding-left: 13px;">Internet search:</div>
-            <div class="row">
-              <div class="col-7">
-                <div class="input-group">
-                  <span class="input-group-text"><i class="bi bi-search"></i></span>
-                  <input id="domain" type="text" class="form-control" placeholder="Site IP address or domain name">
-                </div>
-              </div>
-              <div class="col-3">
-                <input id="port" type="text" class="form-control" placeholder="Port # 10001">
-              </div>
-              <div class="col-2">
-                <button id="internetSearchButton" class="btn btn-danger w-100">Search</button>
-              </div>
-            </div>
-            <div class="row mb-0 pt-3 text-white">
-              <u><b id="howFindButton" class="open-popup-button">How do i find my site (?)</b></u>
-            </div>
+            <button onclick="gotoSearchResult()" class="btn btn-danger search-btn-small report-button"
+              style="padding: 10px 14px; display: none;">Search</button>
           </div>
         </div>
       </div>
+    </div>
 
       <div class="result-content" style="padding-left: 64px;padding-right: 64px;">
         <p class="back-to-result" onclick="backToResult();"
