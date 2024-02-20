@@ -99,6 +99,8 @@
 </head>
 
 <body>
+  <label id="currentPageValue" class="d-none">1</label>
+  <label id="maxPageValue" class="d-none">3</label>
   <nav class="navbar navbar-expand-md navbar-light fixed-top">
     <a class="company-icon" href="./Home.html">
       <img src="./files/trade-mark.svg" height="48.4px">
@@ -315,13 +317,6 @@
   }
 
   function buildPaginationHtml(text, page) {
-    const searchKey = document.getElementById("searchKeyValue").textContent;
-    if (searchKey) {
-      return `<a href="./Articles.html?search=${searchKey}&page=${page}">${text}</a>`;
-    } else {
-      const ipAddress = document.getElementById("ipAddressValue").textContent;
-      const port = document.getElementById("portValue").textContent;
-      return `<a href="./Articles.html?domain=${ipAddress}&port=${port}&page=${page}">${text}</a>`;
-    }
+      return `<a href="./Articles.html?page=${page}">${text}</a>`;
   }
 </script>
