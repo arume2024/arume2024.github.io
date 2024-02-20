@@ -231,10 +231,6 @@
         padding: 12px 10px;
       }
 
-      .column-title-row {
-        width: 130%;
-      }
-
       .vulnerable-icon {
         align-items: center; 
       }
@@ -391,17 +387,17 @@
       </div>
     </div>
 
-    <div class="app-padding">
-      <div class="vulnerable-results-for">
+    <div class="">
+      <div class="vulnerable-results-for app-padding">
         <p id="totalResult" class="vulnerable-results-for-text-red"></p>
         &nbsp;
         <p class="vulnerable-results-for-text-black">vulnerable results for</p>
         &nbsp;
       </div>
-      <div>
+      <div class="app-padding">
         <h1 id="searchKey" style="color: red;"></h1>
       </div>
-      <div>
+      <div class="app-padding">
         <h1 id="portSearch" style="color: red;"></h1>
       </div>
 
@@ -409,7 +405,7 @@
         <p class="result-gray-panel">
           Vulnerable tank gauges discoverable via Shodan.io search engine. Last updated: 13:24PM 12.12.2023</p>
         <div class="container column-title">
-          <div class="row column-title-row">
+          <div class="row app-padding">
             <p class="col-4 text-start">STATION INFORMATION</p>
             <p class="col-2">TANK VOLUME</p>
             <p class="col-4 text-center">VULNERABILITY SCORE <img id="scoreDescriptionButton" src="./files/ic-info-outline.svg"
@@ -417,7 +413,7 @@
                 onclick="openPopup('scoreDescriptionModal')"></img></p>
           </div>
         </div>
-        <div class="container column-content" style="max-width: 100%; margin: 0px;">
+        <div class="container column-content app-padding" style="max-width: 100%; margin: 0px;">
           
           <div id="item-1" class="item">
             <div class="row" style="margin-bottom: 8px; margin-top: 24px;">
@@ -613,7 +609,7 @@
         </div>
       </div>
   
-      <div id="no-result" class="no-result" style="max-width: 100%; margin: 48px 0px;">
+      <div id="no-result" class="no-result app-padding" style="max-width: 100%; margin: 48px 0px;">
         <div class="row">
           <div class="col-9">
             <p style="font-weight: 600;">We did not find any sites matching your current search
