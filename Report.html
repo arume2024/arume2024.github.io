@@ -233,31 +233,37 @@
                 </div>
             </div>
             <div class="main-form col-12 col-sm-10 col-md-6 content-list rounded shadow-lg" style="background-color: white; padding: 2% 2%;">
-                <form name="reportForm" action="./Report-completed.html" style="margin: 3rem 5rem 3rem 5rem;" onsubmit="return validateForm()">
-                    <h3 style="margin: 2rem 0rem 2rem 0rem;">Site Report form</h3>
-                    <h5 style="margin: 1rem 0rem 1rem 0rem;">Contact Information</h5>
-                    <p id="errorMessage" class="hide-error">Please fill all information</p>
-                    <div class="mb-3">
-                        <input type="text" name="title" class="form-control" id="title" placeholder="Title - Mr/Mrs/Ms" />
+                <div class="row justify-content-center">
+                    <div class="col-12" >
+                        <form name="reportForm" action="./Report-completed.html"  onsubmit="return validateForm()">
+                            <h3 style="margin: 2rem 0rem 2rem 0rem;">Site Report form</h3>
+                            <h5 style="margin: 1rem 0rem 1rem 0rem;">Contact Information</h5>
+                            <p id="errorMessage" class="hide-error">Please fill all information</p>
+                            <div class="mb-3">
+                                <input type="text" name="title" class="form-control" id="title" placeholder="Title - Mr/Mrs/Ms" />
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" name="fullName" class="form-control" id="inputFullName" placeholder="Full Name - John Smith" />
+                            </div>
+                            <div class="mb-3">
+                                <input type="text"  name="contactNumber" class="form-control" id="inputContactNumber" placeholder="Contact Number - 1234567890"  onkeypress='validateNumber(event)'  />
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email Address - email@email.com" />
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" name="role" class="form-control" id="inputRole" placeholder="Company Role - Security Manager" />
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="agreeCheckBox" />
+                                <label class="form-check-label" for="boxCheck"> I have read and agree our <u id="myBtn" style="cursor: pointer;">disclaimer</u> </label>
+                            </div>
+                            <center style="margin: 3rem 0rem 0rem 0rem;"><button id="submitButton" type="submit" class="btn btn-danger me-2 py-2 report-button d-md-block disabled"  >Submit Report</button></center>
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        <input type="text" name="fullName" class="form-control" id="inputFullName" placeholder="Full Name - John Smith" />
-                    </div>
-                    <div class="mb-3">
-                        <input type="text"  name="contactNumber" class="form-control" id="inputContactNumber" placeholder="Contact Number - 1234567890"  onkeypress='validateNumber(event)'  />
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email Address - email@email.com" />
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" name="role" class="form-control" id="inputRole" placeholder="Company Role - Security Manager" />
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="agreeCheckBox" />
-                        <label class="form-check-label" for="boxCheck"> I have read and agree our <u id="myBtn" style="cursor: pointer;">disclaimer</u> </label>
-                    </div>
-                    <center style="margin: 3rem 0rem 0rem 0rem;"><button id="submitButton" type="submit" class="btn btn-danger me-2 py-2 report-button d-md-block disabled"  >Submit Report</button></center>
-                </form>
+                </div>
+                
+                
             </div>
         </main>
 
