@@ -7,16 +7,19 @@
         <meta name="author" content="TSA Team" />
         <meta name="generator" content="TSA" />
         <title>ARUME - Solution</title>
-        <meta name="description" content="ARUME allows you to check fuel tank gauges exposed
+        <meta
+            name="description"
+            content="ARUME allows you to check fuel tank gauges exposed
         on the internet. Test your sites' security and protect our
-        nation's critical infrastructure from cyber attacks.">
+        nation's critical infrastructure from cyber attacks."
+        />
         <title>ARUME</title>
-        <link rel="shortcut icon" href="./favicon.ico">
+        <link rel="shortcut icon" href="./favicon.ico" />
 
         <!-- Bootstrap core CSS -->
         <link href="./files/bootstrap.min.css" rel="stylesheet" />
         <link href="./css/header.css" rel="stylesheet" />
-        <link href="./css/ultil.css" rel="stylesheet">
+        <link href="./css/ultil.css" rel="stylesheet" />
         <script src="./script/jquery-3.7.1.min"></script>
         <script src="./script/bootstrap.js"></script>
 
@@ -40,6 +43,9 @@
                 p {
                     padding-bottom: 0.5rem;
                 }
+            }
+            i {
+                padding-left:1rem;
             }
             .big-text-inside-image {
                 /* font-size: 96px; */
@@ -151,7 +157,7 @@
                     line-height: 27px;
                 }
                 .small-text-inside-image {
-                    font-size: 10px!important;
+                    font-size: 10px !important;
                     line-height: 5px;
                 }
 
@@ -208,28 +214,26 @@
     </head>
 
     <body>
-      <nav class="navbar navbar-expand-md navbar-light fixed-top">
-        <a class="company-icon" href="./Home.html">
-          <img src="./files/trade-mark.svg" height="48.4px">
-        </a>
-    
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-          <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Vulnerability.html">VULNERABILITY</a>
-          <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Solutions.html">SOLUTIONS</a>
-          <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Articles.html">ARTICLES</a>
-          <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./About-landing.html">ABOUT</a>
-          <div class="report-button-border">
-            <button type="button" class="btn btn-danger py-2 report-button d-md-block"
-              onclick="location.href = './Report.html'">
-              Report
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+            <a class="company-icon" href="./Home.html">
+                <img src="./files/trade-mark.svg" height="48.4px" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          </div>
-        </div>
-      </nav>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Vulnerability.html">VULNERABILITY</a>
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Solutions.html">SOLUTIONS</a>
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./Articles.html">ARTICLES</a>
+                <a class="me-2 py-2 text-dark nav-link text-decoration-underline" href="./About-landing.html">ABOUT</a>
+                <div class="report-button-border">
+                    <button type="button" class="btn btn-danger py-2 report-button d-md-block" onclick="location.href = './Report.html'">
+                        Report
+                    </button>
+                </div>
+            </div>
+        </nav>
 
         <main class="content">
             <div class="content-top-image">
@@ -243,7 +247,7 @@
                     </p>
                 </div>
             </div>
-            <div class="container" style="padding-top: 90px; padding-bottom: 40px; line-height: 39px;">
+            <div class="container" style="padding-top: 90px; padding-bottom: 40px;">
                 <div class="row">
                     <div class="menu-left-panel col-2">
                         <p id="vulnerability-prevention-button" style="margin-bottom: 32px;" class="menu-item-selected">
@@ -284,51 +288,48 @@
                                 <br />
                                 <p id="section-weak-solutions" style="font-size: 32px; font-weight: 700;">Weak Solutions</p>
                                 <br />
-                                <b>Employee Training</b>
-                                <br />
-                                Overview: Educate all users to recognize phishing attempts and prevent social engineering attacks.
-                                <div style="display: flex; padding-left: 4px;">
+                                <p><strong>Employee Training</strong></p>
+                                <p>Overview: Educate all users to recognize phishing attempts and prevent social engineering attacks.</p>
+                                <div style="display: flex;">
                                     <i> Effectiveness -&nbsp</i>
                                     <p style="color: #ff000c; margin-bottom: 0px !important;">2/10</p>
                                 </div>
                                 <br />
-                                <b>Two-Factor Authentication</b>
                                 <br />
-                                Overview: Require a secondary check like a code text/email in addition to passwords for remote access.
-                                <br />
-                                <div style="display: flex; padding-left: 4px;">
+                                <p><strong>Two-Factor Authentication </strong></p>
+                                <p>Overview: Require a secondary check like a code text/email in addition to passwords for remote access.</p>
+                                <div style="display: flex;">
                                     <i> Effectiveness -&nbsp</i>
                                     <p style="color: #ff000c;">2/10</p>
                                 </div>
                                 <br />
-                                <b>Restrict Unknown IP Addresses</b>
                                 <br />
-                                Overview: Block access attempts from IP addresses not on an approved whitelist to prevent unauthorized remote access from unknown locations. Only IP addresses associated with known legitimate remote access
-                                points would be allowed to connect.
-                                <br />
-                                <div style="display: flex; padding-left: 4px;">
+                                <p><strong>Restrict Unknown IP Addresses</strong></p>
+                                <p>Overview: Block access attempts from IP addresses not on an approved whitelist to prevent unauthorized remote access from unknown locations. Only IP addresses associated with known legitimate remote access
+                                points would be allowed to connect.</p>
+                                <div style="display: flex;">
                                     <i> Effectiveness -&nbsp</i>
                                     <p style="color: #ff000c;">2/10</p>
                                 </div>
                                 <br />
-                                <b>Strong Password Policies</b>
-                                <br />
-                                Overview: Require complex, unique passwords that are regularly changed to prevent brute force or credential theft attacks.
-                                <br />
-                                <div style="display: flex; padding-left: 4px;">
+                                <p><strong>Strong Password Policies</strong></p>
+                                <p>Overview: Require complex, unique passwords that are regularly changed to prevent brute force or credential theft attacks.</p>
+                                <div style="display: flex;">
                                     <i> Effectiveness -&nbsp</i>
                                     <p style="color: #ff000c;">3/10</p>
                                 </div>
                                 <br />
-                                Firewalls Overview: Use network firewalls to filter and monitor incoming and outgoing traffic, blocking unauthorized access attempts. Effectiveness - 4/10 Also Read: Why Firewalls aren’t enough to protect
-                                against evolving cyber threats
+                                <p><strong>Restrict Unknown IP Addresses</strong></p>
+                                <p>Overview: Use network firewalls to filter and monitor incoming and outgoing traffic, blocking unauthorized access attempts.</p>
+                                <div style="display: flex;">
+                                    <i> Effectiveness -&nbsp</i>
+                                    <p style="color: #ff000c;">4/10</p>
+                                </div>
+                                <p>Also Read: <a href="#">Why Firewalls aren’t enough to protect against evolving cyber threats</a></p>
                                 <br />
-                                <br />
-                                <b>VPNs</b>
-                                <br />
-                                Overview: Require use of a VPN with multi-factor authentication for any remote access rather than exposing systems directly.
-                                <br />
-                                <div style="display: flex; padding-left: 4px;">
+                                <p><strong>VPNs</strong></p>
+                                <p>Overview: Require use of a VPN with multi-factor authentication for any remote access rather than exposing systems directly.</p>
+                                <div style="display: flex;">
                                     <i> Effectiveness -&nbsp</i>
                                     <p style="color: #ff000c;">5/10</p>
                                 </div>
@@ -337,33 +338,24 @@
                                 <p id="section-strong-solutions" style="font-size: 32px; font-weight: 700;">Stronger Solutions</p>
                                 <br />
                                 <br />
-                                <b>Remove TCP/IP Cards</b>
-                                <br />
-                                Overview: Eliminates remote access vulnerability. By removing public network connectivity, it prevents threats
-                                <br />
-                                <div style="display: flex; padding-left: 4px;">
+                                <p><strong>Remove TCP/IP Cards</strong></p>
+                                <p>Overview: Eliminates remote access vulnerability. By removing public network connectivity, it prevents threats</p>
+                                <div style="display: flex;">
                                     <i> Effectiveness -&nbsp</i>
                                     <p style="color: #4ecb71;">6/10</p>
                                 </div>
+                                <p>Also Read: <a href="#">Thousands of U.S. Gas Stations Vulnerable to Cyber attacks</a></p>
                                 <br />
-                                Also Read: <u>Thousands of U.S. Gas Stations Vulnerable to Cyber attacks</u>
-                                <br />
-                                <br />
-                                <b><u>Kachoolie</u></b>
-                                <br />
-                                Overview: Installing Kachoolie eliminates the need for a static IP address and router removing the vulnerable causes of many cyberattacks to ATGs,
-                                <br />
-                                <div style="display: flex; padding-left: px;">
+                                <p><strong><u>Kachoolie</u></strong></p>
+                                <p>Overview: Installing Kachoolie eliminates the need for a static IP address and router removing the vulnerable causes of many cyberattacks to ATGs,</p>
+                                <div style="display: flex;">
                                     <i> Effectiveness -&nbsp</i>
                                     <p style="color: #4ecb71;">9/10</p>
                                 </div>
                                 <br />
-                                <b><u>LockDown™ </u></b>
-                                <br />
-                                Overview:
-                                <br />
-                                <br />
-                                <div style="display: flex; padding-left: 4px;">
+                                <p><strong><u>LockDown™</u></strong></p>
+                                <p>Overview: </p>
+                                <div style="display: flex;">
                                     <i> Effectiveness -&nbsp</i>
                                     <p style="color: #4ecb71;">9/10</p>
                                 </div>
@@ -371,15 +363,15 @@
                                 <br />
                                 <p id="section-conclusion" style="font-size: 32px; font-weight: 700;">Conclusion</p>
                                 <br />
-                                By implementing multiple layers of defense-in-depth protections like these, automatic tank gauge systems can be better safeguarded against the evolving cyber threats targeted at vulnerabilities. A combination
-                                of technical, administrative and physical security controls helps create a robust security posture.
+                                <p>By implementing multiple layers of defense-in-depth protections like these, automatic tank gauge systems can be better safeguarded against the evolving cyber threats targeted at vulnerabilities. A combination
+                                of technical, administrative and physical security controls helps create a robust security posture.</p>
                                 <br />
                                 <br />
                                 <p id="section-links" style="font-size: 32px; font-weight: 700;">Links</p>
                                 <ul>
-                                    <li>Defense-in-Depth Report on Cybersecurity</li>
-                                    <li>Vulnerability & Exploit Database</li>
-                                    <li>Vulnerability Questionnaire</li>
+                                    <li><a href="#">Defense-in-Depth Report on Cybersecurity</a></li>
+                                    <li><a href="#">Vulnerability & Exploit Database</a></li>
+                                    <li><a href="#">Vulnerability Questionnaire</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -388,49 +380,48 @@
             </div>
         </main>
 
-        <footer id="footer" style="display: block; width: 100%" class="footer-bs bg-dark text-white">
+        <footer id="footer" style="display: block; width: 100%;" class="footer-bs bg-dark text-white">
             <div class="container app-padding max-width" style="padding-top: 2rem; padding-bottom: 10px;">
-              <div class="row">
-                <div class="col-12 col-sm-7">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div style="display: flex;">
-                        <p style="font-size: 1.5rem; font-weight: 500; line-height: 28px;">ARUME</p>
-                        <b style="font-size: 1.5rem; font-weight: 500; line-height: 28px; color: #FF000C;">.</b>
-                      </div>
-                      <p style="font-weight: 600; font-size: 1rem; line-height: 24px; margin: 1.5rem 0px 0px 0.5rem;">Contact us
-                      </p>
-                      <p style="margin: 0.5rem 0px 0px 0.5rem;">
-                        <a href="mailto:support@arume.org">support@arume.org</a>
-                      </p>
+                <div class="row">
+                    <div class="col-12 col-sm-7">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-5">
+                                <div style="display: flex;">
+                                    <p style="font-size: 1.5rem; font-weight: 500; line-height: 28px;">ARUME</p>
+                                    <b style="font-size: 1.5rem; font-weight: 500; line-height: 28px; color: #ff000c;">.</b>
+                                </div>
+                                <p style="font-weight: 600; font-size: 1rem; line-height: 24px; margin: 1.5rem 0px 0px 0.5rem;">Contact us</p>
+                                <p style="margin: 0.5rem 0px 0px 0.5rem;">
+                                    <a href="mailto:support@arume.org">support@arume.org</a>
+                                </p>
+                            </div>
+                            <div class="col-sm-6 col-md-7" style="padding-left: 20px;">
+                                <p class="footer-customize">
+                                    <a class="text-decoration-none" style="color: #ff000c;" href="./Report.html">Report Attack</a>
+                                </p>
+                                <p style="margin-top: 0.5rem;">
+                                    <a class="text-decoration-none text-white" href="./Vulnerability.html">Station Vulnerability</a>
+                                </p>
+                                <p style="margin-top: 0.5rem;">Centro comercial Moctezuma</p>
+                                <p style="margin-top: 0.5rem;">
+                                    <a class="text-decoration-none text-white" href="./Articles.html">Articles</a>
+                                </p>
+                                <p style="margin-top: 0.5rem;">
+                                    <a class="text-decoration-none text-white" href="./Disclaimer.html">Disclaimer</a>
+                                </p>
+                                <p style="margin-top: 0.5rem;">
+                                    <a class="text-decoration-none text-white" href="./Term.html">T&amp;Cs</a>
+                                </p>
+                                <br />
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-6 col-md-7" style="padding-left: 20px;">
-                      <p class="footer-customize">
-                        <a class="text-decoration-none" style="color: #FF000C;" href="./Report.html">Report Attack</a>
-                      </p>
-                      <p style="margin-top: 0.5rem;">
-                        <a class="text-decoration-none text-white" href="./Vulnerability.html">Station Vulnerability</a>
-                      </p>
-                      <p style="margin-top: 0.5rem;">Centro comercial Moctezuma</p>
-                      <p style="margin-top: 0.5rem;">
-                        <a class="text-decoration-none text-white" href="./Articles.html">Articles</a>
-                      </p>
-                      <p style="margin-top: 0.5rem;">
-                        <a class="text-decoration-none text-white" href="./Disclaimer.html">Disclaimer</a>
-                    </p>
-                      <p style="margin-top: 0.5rem;">
-                        <a class="text-decoration-none text-white" href="./Term.html">T&amp;Cs</a>
-                      </p>
-                      <br>
+                    <div class="col-12 col-sm-5" style="display: flex; align-self: flex-end; padding-left: 20px; justify-content: end;">
+                        <p>ARUME © 2024. All rights reserved.</p>
                     </div>
-                  </div>
                 </div>
-                <div class="col-12 col-sm-5" style="display: flex;align-self: flex-end; padding-left: 20px;justify-content: end;">
-                  <p>ARUME © 2024. All rights reserved.</p>
-                </div>
-              </div>
             </div>
-          </footer>
+        </footer>
     </body>
 </html>
 
