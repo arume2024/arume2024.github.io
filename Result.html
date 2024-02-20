@@ -123,7 +123,6 @@
     }
 
     .vulnerable-results-for {
-      padding: 0px 0px 48px 0px;
       display: flex;
       flex-flow: row nowrap;
       align-items: flex-start;
@@ -242,6 +241,10 @@
       margin-top: 0.75rem !important;
     }
 
+    .search-value-prefix {
+      margin-left: 3.5vw;
+    }
+
     @media screen and (max-width: 1023px) {
       .footer-customize {
         margin-top: 0.5rem;
@@ -250,7 +253,6 @@
       .vulnerable-results-for {
         font-size: x-large;
         margin-left: 1vh;
-        padding: 0px 0px 16px 0px;
       }
 
       .body-content {
@@ -268,6 +270,7 @@
 
       .button-inspect {
         width: 50%;
+        margin-left: 1.5rem;
       }
 
       .column-title-text {
@@ -311,7 +314,7 @@
 
   <main class="content mt-5">
     <label id="totalResultValue" class="d-none">20</label>
-    <label id="searchKeyValue" class="d-none">192.0.2.1</label>
+    <label id="searchKeyValue" class="d-none">Vulnerable tank gauges discoverable via Shodan.io</label>
     <label id="portValue" class="d-none">10001</label>
     <label id="currentPageValue" class="d-none">1</label>
     <label id="maxPageValue" class="d-none">3</label>
@@ -432,13 +435,15 @@
       <div class="vulnerable-results-for app-padding">
         <p id="totalResult" class="vulnerable-results-for-text-red"></p>
         &nbsp;
-        <p class="vulnerable-results-for-text-black">vulnerable results for:</p>
+        <p class="vulnerable-results-for-text-black">vulnerable results</p>
         &nbsp;
       </div>
       <div class="vulnerable-results-for app-padding" style="padding-bottom: 0px;">
+        <p class="vulnerable-results-for-text-black search-value-prefix" style="margin-right: 2rem;">For:</p>
         <p id="searchKey" class="vulnerable-results-for-text-red"></p>
       </div>
-      <div class="vulnerable-results-for app-padding">
+      <div class="vulnerable-results-for app-padding" style="margin-bottom: 24px;">
+        <p class="vulnerable-results-for-text-black search-value-prefix" style="margin-right: 1rem;">Port:</p>
         <p id="portSearch" class="vulnerable-results-for-text-red"></p>
       </div>
 
@@ -480,8 +485,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
@@ -510,8 +515,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
@@ -540,8 +545,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
@@ -570,8 +575,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
@@ -600,8 +605,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
@@ -630,8 +635,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
