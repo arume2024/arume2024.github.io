@@ -44,6 +44,11 @@
     .content {
       flex: 1;
     }
+    .custom-under-line {
+                padding-bottom: 2.5px;
+                border-bottom: 1.5px solid;
+                line-height: 48px;
+            }
 
     .footer {
       background-color: #f5f5f5;
@@ -210,7 +215,7 @@
       </div>
     </div>
 
-      <div class="result-content" style="padding-left: 64px;padding-right: 64px;">
+      <div class="result-content app-padding" style="padding-left: 64px;padding-right: 64px;">
         <p class="back-to-result" onclick="backToResult();"
           style="display: inline-block;font-size: 20px;padding-top: 24px;padding-bottom: 16px;"><u>Back to results</u>
         </p>
@@ -224,7 +229,7 @@
                   <div class="info"
                     style="height: 533px;margin-bottom: 24px;background-color: white;border-radius: 12px;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
                     <div class="map"
-                      style="height: 339px; background-color: gray;border-top-left-radius: 12px;border-top-right-radius: 12px;">
+                      style="height: 339px; background-color: gray;border-top-left-radius: 6px;border-top-right-radius: 12px;">
                       Google map here!!
                     </div>
                     <div style="padding: 24px 32px;">
@@ -237,7 +242,7 @@
                     </div>
                   </div>
                   <p
-                    style="display: flex;background-color: var(--mainColor);padding: 24px;border-radius: 12px;font-size: 24px;color: white;font-weight: 500;max-width: 591px;">
+                    style="display: flex;background-color: var(--mainColor);padding: 24px;border-radius: 6px;font-size: 24px;color: white;font-weight: 500;">
                     <img src="./files/ic-circle-exclamation.svg"
                       style="width: 60px;height: 60px;margin-right: 24px;"></img>
                     <span style="align-self: flex-end;margin-top: auto;margin-bottom: auto;">
@@ -245,7 +250,7 @@
                     </span>
                   </p>
                 </div>
-                <div class="kachoolie-data col-xl-6"
+                <div class="kachoolie-data  col-xl-6"
                   style="color: aqua;margin-bottom: 32px;padding: 0px;padding-left: 8px;padding-right: 8px;">
                   <img class="kachoolie-chart" src="./files/kachoolie-map.png"
                     style="height: 266px;margin-bottom: 24px;width: 100%;">
@@ -265,10 +270,10 @@
       </div>
 
       <div class="review-background" style="background: linear-gradient(to top, var(--mainColor) 0%, var(--mainColor) 80%, white 80%, white 100%)">
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-lg-2"></div>
           <div class="review col-lg-8"
-            style="border-radius: 12px;border-color: var(--mainColor); border-style: solid;border-width: 2px;
+            style="border-radius: 6px;border-color: var(--mainColor); border-style: solid;border-width: 2px;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             color: #141418;font-size: 20px;font-weight: 300;padding: 32px 24px;
             margin-bottom: 32px;background-color: white;">
@@ -277,7 +282,7 @@
               tempor incididunt ut.</p>
             <p id="site-open-start-session" style="margin-bottom: 24px;font-weight: 600;font-size: 24px;">Vulnerability Score</p>
             <p
-              style="display: flex;background-color: var(--mainColor);padding: 24px;border-radius: 12px;font-size: 24px;color: white;font-weight: 500;max-width: 591px;margin-bottom: 32px;">
+              style="display: flex;background-color: var(--mainColor);padding: 24px;border-radius: 6px;font-size: 24px;color: white;font-weight: 500;max-width: 591px;margin-bottom: 32px;">
               <img src="./files/ic-circle-exclamation.svg" style="width: 60px;height: 60px;margin-right: 24px;"></img>
               <span style="align-self: flex-end;margin-top: auto;margin-bottom: auto;">Site open to the internet</span>
             </p>
@@ -292,7 +297,7 @@
               We recommend disconnecting your gauge from the internet until these vulnerabilities have been prevented.
               Follow the step by step process to get you back online and protected.
             </p>
-            <button style="background: #FF000C;border-radius: 12px;color: white;padding: 10px 18px;font-size: 18px;font-weight: 800;border: none;">Secure my site</button>
+            <button style="background: #FF000C;border-radius: 6px;color: white;padding: 10px 18px;font-size: 18px;font-weight: 800;border: none;">Secure my site</button>
           </div>
           <div class="col-lg-2"></div>
         </div>
