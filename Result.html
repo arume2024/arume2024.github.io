@@ -123,7 +123,6 @@
     }
 
     .vulnerable-results-for {
-      padding: 0px 0px 48px 0px;
       display: flex;
       flex-flow: row nowrap;
       align-items: flex-start;
@@ -212,6 +211,40 @@
       padding-left: 48px;
     }
 
+    .column-title-row {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+	
+    .column-title-row {
+      margin-left: 0px;
+      margin-right: 0px;
+      font-weight: 700;
+    }
+
+    .column-title-text {
+      font-size: 1rem;
+    }
+
+    .modal-content {
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+    }
+
+    .modal-score-icon {
+      width: 50px !important;
+      height: 50px !important;
+    }
+
+    .modal-score-text {
+      margin-top: 0.75rem !important;
+    }
+
+    .search-value-prefix {
+      margin-left: 3.5vw;
+    }
+
     @media screen and (max-width: 1023px) {
       .footer-customize {
         margin-top: 0.5rem;
@@ -231,16 +264,25 @@
         padding: 12px 10px;
       }
 
-      .column-title-row {
-        width: 130%;
-      }
-
       .vulnerable-icon {
         align-items: center; 
       }
 
       .button-inspect {
         width: 50%;
+        margin-left: 1.5rem;
+      }
+
+      .column-title-text {
+        font-size: 14px;
+        margin-right: 2vw;
+        padding-left: 0%;
+      }
+
+      .modal-score-text {
+        font-size: medium;
+        padding-left: 1.5rem !important;
+        margin-top: 0px !important;
       }
     }
   </style>
@@ -272,13 +314,12 @@
 
   <main class="content mt-5">
     <label id="totalResultValue" class="d-none">20</label>
-    <label id="searchKeyValue" class="d-none">192.0.2.1</label>
+    <label id="searchKeyValue" class="d-none">Vulnerable tank gauges discoverable via Shodan.io</label>
     <label id="portValue" class="d-none">10001</label>
     <label id="currentPageValue" class="d-none">1</label>
     <label id="maxPageValue" class="d-none">3</label>
     <div id="howFindModal" class="modal">
-      <div class="modal-content"
-        style="border-radius: 12px;padding: 24px;box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);">
+      <div class="modal-content">
         <div>
           <h6 class="modal-title">How do I find my site?</h6>
           <p>You can search our database by site address, tank gauge banner (example below), by branded oil company
@@ -294,40 +335,39 @@
       </div>
     </div>
     <div id="scoreDescriptionModal" class="modal">
-      <div class="modal-content"
-        style="border-radius: 12px;padding: 24px;box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);">
+      <div class="modal-content">
         <div>
           <h6 class="modal-title">Vulnerability Score Explained</h6>
           <div class="row mb-3">
             <div class="col-1">
-              <img src="./files/serve.png"/>
+              <img class="modal-score-icon" src="./files/serve.png"/>
             </div>
             <div class="col-11">
-              <p class="mt-3 px-lg-2">Your site has been rated a ‘SEVERE’ score for vulnerability.</p>
+              <p class="px-sm-2 modal-score-text">Your site has been rated a ‘SEVERE’ score for vulnerability.</p>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-1">
-              <img src="./files/moderate.png"/>
+              <img class="modal-score-icon" src="./files/moderate.png"/>
             </div>
             <div class="col-11">
-              <p class="mt-3 px-lg-2">Your site has been rated a ‘MODERATE’ score for vulnerability.</p>
+              <p class="px-sm-2 modal-score-text">Your site has been rated a ‘MODERATE’ score for vulnerability.</p>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-1">
-              <img src="./files/caution.png"/>
+              <img class="modal-score-icon" src="./files/caution.png"/>
             </div>
             <div class="col-11">
-              <p class="mt-3 px-lg-2">Your site has been rated a ‘CAUTION’ score for vulnerability.</p>
+              <p class="px-sm-2 modal-score-text">Your site has been rated a ‘CAUTION’ score for vulnerability.</p>
             </div>
           </div>
           <div class="row mb-3">
             <div class="col-1">
-              <img src="./files/secure.png"/>
+              <img class="modal-score-icon" src="./files/secure.png"/>
             </div>
             <div class="col-11">
-              <p class="mt-3 mb-4 px-lg-2">Your site has been rated a ‘SECURE’ score for vulnerability.</p>
+              <p class="mb-4 px-sm-2 modal-score-text">Your site has been rated a ‘SECURE’ score for vulnerability.</p>
             </div>
           </div>
         </div>
@@ -391,33 +431,35 @@
       </div>
     </div>
 
-    <div class="app-padding">
-      <div class="vulnerable-results-for">
+    <div class="">
+      <div class="vulnerable-results-for app-padding">
         <p id="totalResult" class="vulnerable-results-for-text-red"></p>
         &nbsp;
-        <p class="vulnerable-results-for-text-black">vulnerable results for</p>
+        <p class="vulnerable-results-for-text-black">vulnerable results</p>
         &nbsp;
       </div>
-      <div>
-        <h1 id="searchKey" style="color: red;"></h1>
+      <div class="vulnerable-results-for app-padding" style="padding-bottom: 0px;">
+        <p class="vulnerable-results-for-text-black search-value-prefix" style="margin-right: 2rem;">For:</p>
+        <p id="searchKey" class="vulnerable-results-for-text-red"></p>
       </div>
-      <div>
-        <h1 id="portSearch" style="color: red;"></h1>
+      <div class="vulnerable-results-for app-padding" style="margin-bottom: 24px;">
+        <p class="vulnerable-results-for-text-black search-value-prefix" style="margin-right: 1rem;">Port:</p>
+        <p id="portSearch" class="vulnerable-results-for-text-red"></p>
       </div>
 
       <div id="has-result" class="has-result">
         <p class="result-gray-panel">
           Vulnerable tank gauges discoverable via Shodan.io search engine. Last updated: 13:24PM 12.12.2023</p>
         <div class="container column-title">
-          <div class="row column-title-row">
-            <p class="col-4 text-start">STATION INFORMATION</p>
-            <p class="col-2">TANK VOLUME</p>
-            <p class="col-4 text-center">VULNERABILITY SCORE <img id="scoreDescriptionButton" src="./files/ic-info-outline.svg"
+          <div class="row app-padding column-title-row">
+            <p class="col-5 text-start column-title-text">STATION INFORMATION</p>
+            <p class="col-2 column-title-text">TANK VOLUME</p>
+            <p class="col-4 text-start column-title-text">VULNERABILITY SCORE <img id="scoreDescriptionButton" src="./files/ic-info-outline.svg"
                 style="width: 20px;height: 20px; margin-right: 24px;"
                 onclick="openPopup('scoreDescriptionModal')"></img></p>
           </div>
         </div>
-        <div class="container column-content" style="max-width: 100%; margin: 0px;">
+        <div class="container column-content app-padding" style="max-width: 100%; margin: 0px;">
           
           <div id="item-1" class="item">
             <div class="row" style="margin-bottom: 8px; margin-top: 24px;">
@@ -443,8 +485,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
@@ -473,8 +515,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
@@ -503,8 +545,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
@@ -533,8 +575,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
@@ -563,8 +605,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
@@ -593,8 +635,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-1"></div>
-              <div class="divide col-9" style="height: 1px;background-color: #B1B5C3;"></div>
+              <div class="index-column"></div>
+              <div class="divide col-10" style="height: 1px; background-color: #B1B5C3; margin-left: 1rem;"></div>
               <div class="col-2"></div>
             </div>
           </div>
@@ -613,7 +655,7 @@
         </div>
       </div>
   
-      <div id="no-result" class="no-result" style="max-width: 100%; margin: 48px 0px;">
+      <div id="no-result" class="no-result app-padding" style="max-width: 100%; margin: 48px 0px;">
         <div class="row">
           <div class="col-9">
             <p style="font-weight: 600;">We did not find any sites matching your current search
