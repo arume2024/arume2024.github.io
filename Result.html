@@ -266,9 +266,8 @@
   </nav>
 
   <main class="content mt-5">
-    <label id="searchKeyValue" class="d-none">Kwik</label>
     <label id="totalResultValue" class="d-none">20</label>
-    <label id="ipAddressValue" class="d-none">192.0.2.1</label>
+    <label id="searchKeyValue" class="d-none">192.0.2.1</label>
     <label id="portValue" class="d-none">10001</label>
     <label id="currentPageValue" class="d-none">1</label>
     <label id="maxPageValue" class="d-none">3</label>
@@ -393,7 +392,12 @@
         &nbsp;
         <p class="vulnerable-results-for-text-black">vulnerable results for</p>
         &nbsp;
-        <p id="searchKey" class="vulnerable-results-for-text-red"></p>
+      </div>
+      <div>
+        <h1 id="searchKey" style="color: red;"></h1>
+      </div>
+      <div>
+        <h1 id="portSearch" style="color: red;"></h1>
       </div>
 
       <div id="has-result" class="has-result">
@@ -698,14 +702,9 @@
 
   function updatSearchKey() {
     const searchKey = document.getElementById("searchKeyValue").textContent;
-    if (searchKey) {
-      document.getElementById("searchKey").textContent = "`" + searchKey + "`";
-    } else {
-      const ipAddress = document.getElementById("ipAddressValue").textContent;
-      const port = document.getElementById("portValue").textContent;
-      document.getElementById("ipAddress").textContent = ipAddress;
-      document.getElementById("portSearch").textContent = "#" + port;
-    }
+    const port = document.getElementById("portValue").textContent;
+    document.getElementById("searchKey").textContent = searchKey;
+    document.getElementById("portSearch").textContent = "#" + port;
   }
 
   function buildPagination() {
@@ -741,12 +740,7 @@
 
   function buildPaginationHtml(text, page) {
     const searchKey = document.getElementById("searchKeyValue").textContent;
-    if (searchKey) {
-      return `<a href="./Result.html?search=${searchKey}&page=${page}">${text}</a>`;
-    } else {
-      const ipAddress = document.getElementById("ipAddressValue").textContent;
-      const port = document.getElementById("portValue").textContent;
-      return `<a href="./Result.html?domain=${ipAddress}&port=${port}&page=${page}">${text}</a>`;
-    }
+    const port = document.getElementById("portValue").textContent;
+    return `<a href="./Result.html?searchKey=${searchKey}&port=${port}&page=${page}">${text}</a>`;
   }
 </script>
