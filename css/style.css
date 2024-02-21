@@ -3731,7 +3731,7 @@ a:focus,
   .carousel-control-next {
 	width: 3rem;
 	height: 3rem;
-	background-color: grey;
+	background: white;
 	border-radius: 50%;
 	top: 50%;
 	transform: translateY(-50%);
