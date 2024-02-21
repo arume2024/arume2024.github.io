@@ -435,17 +435,10 @@
       <div class="vulnerable-results-for app-padding">
         <p id="totalResult" class="vulnerable-results-for-text-red"></p>
         &nbsp;
-        <p class="vulnerable-results-for-text-black">vulnerable results</p>
+        <p class="vulnerable-results-for-text-black" style="margin-right: 1rem; margin-bottom: 24px;">vulnerable results for: </p><p id="searchKey" class="vulnerable-results-for-text-red"></p>
         &nbsp;
       </div>
-      <div class="vulnerable-results-for app-padding" style="padding-bottom: 0px;">
-        <p class="vulnerable-results-for-text-black search-value-prefix" style="margin-right: 2rem;">For:</p>
-        <p id="searchKey" class="vulnerable-results-for-text-red"></p>
-      </div>
-      <div class="vulnerable-results-for app-padding" style="margin-bottom: 24px;">
-        <p class="vulnerable-results-for-text-black search-value-prefix" style="margin-right: 1rem;">Port:</p>
-        <p id="portSearch" class="vulnerable-results-for-text-red"></p>
-      </div>
+      
 
       <div id="has-result" class="has-result">
         <p class="result-gray-panel">
@@ -729,8 +722,11 @@
 <script src="./script/search-validation.js"></script>
 <script type="text/javascript">
   document.getElementById("howFindButton").addEventListener("click", () => openPopup("howFindModal"));
-
-  updatSearchKey();
+  var params = getParamsMap();
+  console.log(params)
+  var searchKeyValue = params["searchKey"];
+  var searchPort = params["port"];
+  updatSearchKey(searchKeyValue,searchPort);
   updateTotalResult();
   buildPagination();
 
@@ -747,11 +743,14 @@
     }
   }
 
-  function updatSearchKey() {
+  function updatSearchKey(searchKeyValue,searchPort) {
     const searchKey = document.getElementById("searchKeyValue").textContent;
     const port = document.getElementById("portValue").textContent;
-    document.getElementById("searchKey").textContent = searchKey;
-    document.getElementById("portSearch").textContent = "#" + port;
+    document.getElementById("searchKey").textContent = "`" + searchKeyValue + "`";
+    //document.getElementById("portSearch").textContent = "#" + searchPort;
+    document.getElementById("domain").placeholder = searchKeyValue;
+    document.getElementById("port").placeholder = searchPort;
+    
   }
 
   function buildPagination() {
@@ -790,4 +789,15 @@
     const port = document.getElementById("portValue").textContent;
     return `<a href="./Result.html?searchKey=${searchKey}&port=${port}&page=${page}">${text}</a>`;
   }
+
+  function getParamsMap() {
+    var params = window.location.search.split("&");
+    var paramsMap = {};
+    params.forEach(function (p) {
+        var v = p.replace("?","").split("=");
+        paramsMap[v[0]]=decodeURIComponent(v[1]);
+    });
+    return paramsMap;
+};
+
 </script>
