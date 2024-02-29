@@ -746,6 +746,9 @@
   function updatSearchKey(searchKeyValue,searchPort) {
     const searchKey = document.getElementById("searchKeyValue").textContent;
     const port = document.getElementById("portValue").textContent;
+    if (searchKeyValue == "noresult") {
+      document.getElementById("totalResultValue").textContent = 0;
+    }
     document.getElementById("searchKey").textContent = "`" + searchKeyValue + "`";
     //document.getElementById("portSearch").textContent = "#" + searchPort;
     document.getElementById("domain").placeholder = searchKeyValue;
